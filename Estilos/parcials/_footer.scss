@@ -1,0 +1,29 @@
+.footer {
+	background-color: $rojo;
+	color: $blanco;
+	font-family: $fuenteO;
+	margin-top: 2rem;
+	padding: 1.5rem;
+	border-top: solid 1rem $azul;
+	letter-spacing: 0.2rem;
+	font-size: $tamFuente+1.5;
+	font-style: normal;
+	font-weight: bold;
+
+	&__redes {
+		margin: 2rem;
+		font-size: $tamFuente+1.2;
+		display: flex;
+		justify-content: center;
+		a {
+			color: $azul;
+			margin: 0 3rem;
+		}
+		a:hover {
+			color: $gris;
+		}
+	}
+}
+.chauPadding {
+	padding: 0px;
+}

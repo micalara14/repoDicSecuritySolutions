@@ -1,0 +1,103 @@
+nav {
+	border-bottom: solid 1rem $azul;
+}
+.chauPadding {
+	padding: 0px;
+}
+header {
+	width: 100%;
+}
+/*logo*/
+.contenedor__logo {
+	overflow: hidden;
+	margin-left: 2rem;
+	margin-right: 3rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	.logo {
+		border-radius: 50%;
+		width: 10rem;
+		height: 10rem;
+	}
+}
+/*nav*/
+.nav__menu {
+	font-family: $fuenteO;
+	letter-spacing: 0.4rem;
+	font-size: $tamFuente+0.5;
+	width: 100%;
+	li {
+		@include telefono {
+			font-size: $tamFuente;
+		}
+	}
+}
+
+/*estetica inicio*/
+.nav__menu--inicio {
+	transition: letter-spacing 0.3s;
+}
+.nav__menu--inicio:hover {
+	letter-spacing: 0.5rem;
+}
+.nav__menu--inicio a:hover {
+	color: $azul;
+}
+/*estetica nosotros*/
+.nav__menu--nosotros {
+	transition: letter-spacing 0.3s;
+}
+.nav__menu--nosotros:hover {
+	letter-spacing: 0.5rem;
+}
+.nav__menu--nosotros a:hover {
+	color: $azul;
+}
+/*estetica servicio tecnico*/
+.nav__menu--servicioTecnico {
+	transition: letter-spacing 0.3s;
+}
+.nav__menu--servicioTecnico:hover {
+	letter-spacing: 0.5rem;
+}
+.nav__menu--servicioTecnico a:hover {
+	color: $azul;
+}
+/*estetica instalaciones*/
+.nav__menu--instalaciones {
+	transition: letter-spacing 0.3s;
+}
+.nav__menu--instalaciones:hover {
+	letter-spacing: 0.5rem;
+}
+.nav__menu--instalaciones a:hover {
+	color: $azul;
+}
+/*estetica alarmas*/
+.nav__menu--alarmas {
+	letter-spacing: 0.4rem;
+	transition: letter-spacing 0.3s;
+	a {
+		color: $blanco;
+	}
+}
+.nav__menu--alarmas:hover {
+	letter-spacing: 0.5rem;
+}
+.nav__menu--alarmas a:hover {
+	color: $rojo;
+}
+/*estetica camaras*/
+.nav__menu--camaras {
+	letter-spacing: 0.4rem;
+	transition: letter-spacing 0.3s;
+	a {
+		color: $blanco;
+	}
+}
+.nav__menu--camaras:hover {
+	letter-spacing: 0.5rem;
+}
+.nav__menu--camaras a:hover {
+	color: $rojo;
+}

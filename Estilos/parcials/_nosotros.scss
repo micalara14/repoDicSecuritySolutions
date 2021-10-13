@@ -1,0 +1,98 @@
+/*foto+texto*/
+.divNosotros {
+	border-bottom: dotted 0.5rem #2b2d42;
+	&__img {
+		display: flex;
+		justify-content: center;
+		padding: 3rem;
+		.main__imgNosotros {
+			width: 85%;
+			height: auto;
+			border-radius: 5%;
+			margin: 0px;
+			box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.3);
+		}
+	}
+	.main__texto__nosotros {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.main__textoNosotros {
+			font-size: $tamFuente+0.7;
+			font-family: $fuenteM;
+			color: $azul;
+			padding: 1rem;
+			@include telefono {
+				font-size: 2rem;
+				text-align: center;
+			}
+		}
+	}
+}
+/*contacto*/
+.row__parrafoUbicacion {
+	color: $azul;
+	background-color: $blanco;
+	font-family: $fuenteM;
+	font-style: normal;
+	font-weight: normal;
+	font-size: $tamFuente+1;
+	margin: 2rem;
+
+	@include telefono {
+		font-size: 2rem;
+		text-align: center;
+		margin: 2rem 0 0 0;
+	}
+	.main__mapa--mod {
+		border: 2px solid $azul;
+		box-shadow: 2px 5px 10px 3px rgba(0, 0, 0, 0.3);
+		margin-top: 1rem;
+		width: 70%;
+		@include telefono {
+			width: 70%;
+		}
+	}
+}
+
+.row__parrafoUbicacionContacto {
+	margin-top: 5rem;
+	p {
+		margin: 1rem;
+		color: $azul;
+		font-family: $fuenteM;
+		a {
+			text-decoration: none;
+			color: $azul;
+			text-align: center;
+		}
+		i {
+			text-shadow: 0.1rem 0.1rem $rojo;
+		}
+	}
+}
+
+/*trabaja con nosotros*/
+.trabajaConNosotros {
+	font-family: $fuenteM;
+	color: $azul;
+	font-size: $tamFuente+0.3;
+	margin: 3rem;
+	border: solid 3px $azul;
+	border-style: double;
+	padding: 2rem;
+	background: rgb(237, 242, 244);
+	background: -moz-linear-gradient(176deg, rgba(237, 242, 244, 1) 36%, rgba(239, 35, 60, 0.3760533707865169) 100%);
+	background: -webkit-linear-gradient(176deg, rgba(237, 242, 244, 1) 36%, rgba(239, 35, 60, 0.3760533707865169) 100%);
+	background: linear-gradient(176deg, rgba(237, 242, 244, 1) 36%, rgba(239, 35, 60, 0.3760533707865169) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#edf2f4", endColorstr="#ef233c", GradientType=1);
+	&__estilo {
+		color: $rojo;
+		font-weight: bolder;
+		margin-bottom: 1rem;
+	}
+	@include telefono {
+		width: 80%;
+		font-size: $tamFuente;
+	}
+}

@@ -1,0 +1,150 @@
+.main__textoCamaras {
+	p {
+		font-size: $tamFuente+0.5;
+		font-family: $fuenteM;
+		color: $azul;
+		text-align: center;
+		margin: 3rem;
+	}
+	h3 {
+		font-size: $tamFuente+2;
+		font-family: $fuenteM;
+		color: $rojo;
+		text-align: center;
+		margin-top: 2rem;
+		text-shadow: 0.1rem 0.1rem $gris;
+	}
+}
+
+/*imagenes y precios*/
+.rowCamaras {
+	margin: 2rem;
+	&__img {
+		width: 100%;
+		box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.3);
+		border-radius: 15%;
+		margin-bottom: 2rem;
+	}
+	&__precioTexto {
+		font-size: $tamFuente;
+		font-family: $fuenteM;
+		color: $azul;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	&__precio {
+		font-size: $tamFuente+1;
+		font-family: $fuenteM;
+		color: $rojo;
+		font-weight: bolder;
+		text-shadow: 0.1rem 0.1rem $gris;
+		-webkit-animation: heartbeat 5s ease-in-out 3s infinite both;
+		animation: heartbeat 5s ease-in-out 3s infinite both;
+	}
+	&__col {
+		@include telefono {
+			margin-top: 3.5rem;
+			margin-bottom: 3.5rem;
+		}
+	}
+}
+.row__textoCierre {
+	@extend .main__textoCamaras;
+	border-bottom: dotted 0.5rem $azul;
+}
+
+/*marcas de camaras*/
+.row__textoMarcas {
+	font-size: $tamFuente+0.5;
+	font-family: $fuenteM;
+	color: $azul;
+	margin: 2rem 2rem 3rem 2rem;
+	@include telefono {
+		text-align: center;
+	}
+	h4 {
+		color: $rojo;
+		font-size: $tamFuente+2;
+		text-shadow: 0.1rem 0.1rem $gris;
+	}
+}
+.rowMarcas {
+	margin-bottom: 2rem;
+	&__media {
+		width: 100%;
+		height: 100%;
+		border-radius: 5%;
+		margin: 1rem;
+		box-shadow: 2px 3px 10px 5px rgba(0, 0, 0, 0.3);
+	}
+}
+
+/*animacion precios*/
+@-webkit-keyframes heartbeat {
+	from {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		-webkit-transform-origin: center center;
+		transform-origin: center center;
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+	10% {
+		-webkit-transform: scale(0.91);
+		transform: scale(0.91);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+	17% {
+		-webkit-transform: scale(0.98);
+		transform: scale(0.98);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+	33% {
+		-webkit-transform: scale(0.87);
+		transform: scale(0.87);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+	45% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+}
+@keyframes heartbeat {
+	from {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		-webkit-transform-origin: center center;
+		transform-origin: center center;
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+	10% {
+		-webkit-transform: scale(0.91);
+		transform: scale(0.91);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+	17% {
+		-webkit-transform: scale(0.98);
+		transform: scale(0.98);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+	33% {
+		-webkit-transform: scale(0.87);
+		transform: scale(0.87);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+	45% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+}

@@ -1,0 +1,843 @@
+/*colores*/
+/*fuentes*/
+/*reseteo*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*general*/
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #edf2f4;
+  overflow-x: hidden;
+}
+
+.navbar-toggler {
+  margin-right: 3rem;
+}
+
+.container-fluid {
+  padding: 0px;
+}
+
+/*titulos paginas*/
+.titulos__paginas {
+  color: #2b2d42;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem;
+}
+
+.titulos__paginas .h1Html {
+  font-size: 6rem;
+}
+
+/*animacion titulos*/
+.titulos__paginas {
+  -webkit-animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+nav {
+  border-bottom: solid 1rem #2b2d42;
+}
+
+.chauPadding {
+  padding: 0px;
+}
+
+header {
+  width: 100%;
+}
+
+/*logo*/
+.contenedor__logo {
+  overflow: hidden;
+  margin-left: 2rem;
+  margin-right: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contenedor__logo .logo {
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+}
+
+/*nav*/
+.nav__menu {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.4rem;
+  font-size: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .nav__menu li {
+    font-size: 1.5rem;
+  }
+}
+
+/*estetica inicio*/
+.nav__menu--inicio {
+  -webkit-transition: letter-spacing 0.3s;
+  transition: letter-spacing 0.3s;
+}
+
+.nav__menu--inicio:hover {
+  letter-spacing: 0.5rem;
+}
+
+.nav__menu--inicio a:hover {
+  color: #2b2d42;
+}
+
+/*estetica nosotros*/
+.nav__menu--nosotros {
+  -webkit-transition: letter-spacing 0.3s;
+  transition: letter-spacing 0.3s;
+}
+
+.nav__menu--nosotros:hover {
+  letter-spacing: 0.5rem;
+}
+
+.nav__menu--nosotros a:hover {
+  color: #2b2d42;
+}
+
+/*estetica servicio tecnico*/
+.nav__menu--servicioTecnico {
+  -webkit-transition: letter-spacing 0.3s;
+  transition: letter-spacing 0.3s;
+}
+
+.nav__menu--servicioTecnico:hover {
+  letter-spacing: 0.5rem;
+}
+
+.nav__menu--servicioTecnico a:hover {
+  color: #2b2d42;
+}
+
+/*estetica instalaciones*/
+.nav__menu--instalaciones {
+  -webkit-transition: letter-spacing 0.3s;
+  transition: letter-spacing 0.3s;
+}
+
+.nav__menu--instalaciones:hover {
+  letter-spacing: 0.5rem;
+}
+
+.nav__menu--instalaciones a:hover {
+  color: #2b2d42;
+}
+
+/*estetica alarmas*/
+.nav__menu--alarmas {
+  letter-spacing: 0.4rem;
+  -webkit-transition: letter-spacing 0.3s;
+  transition: letter-spacing 0.3s;
+}
+
+.nav__menu--alarmas a {
+  color: #edf2f4;
+}
+
+.nav__menu--alarmas:hover {
+  letter-spacing: 0.5rem;
+}
+
+.nav__menu--alarmas a:hover {
+  color: #d90429;
+}
+
+/*estetica camaras*/
+.nav__menu--camaras {
+  letter-spacing: 0.4rem;
+  -webkit-transition: letter-spacing 0.3s;
+  transition: letter-spacing 0.3s;
+}
+
+.nav__menu--camaras a {
+  color: #edf2f4;
+}
+
+.nav__menu--camaras:hover {
+  letter-spacing: 0.5rem;
+}
+
+.nav__menu--camaras a:hover {
+  color: #d90429;
+}
+
+.footer {
+  background-color: #d90429;
+  color: #edf2f4;
+  font-family: "Oswald", sans-serif;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-top: solid 1rem #2b2d42;
+  letter-spacing: 0.2rem;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.footer__redes {
+  margin: 2rem;
+  font-size: 2.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__redes a {
+  color: #2b2d42;
+  margin: 0 3rem;
+}
+
+.footer__redes a:hover {
+  color: #8d99ae;
+}
+
+.chauPadding {
+  padding: 0px;
+}
+
+/*div formulario*/
+.banner {
+  height: 34rem;
+  border-bottom: solid 1rem #2b2d42;
+  background-image: url(../Imagenes/camara1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), color-stop(88%, rgba(0, 0, 0, 0.8))), url(../Imagenes/camara1.jpg);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.8) 88%), url(../Imagenes/camara1.jpg);
+}
+
+.banner__contacto {
+  font-family: "Oswald", sans-serif;
+  color: #edf2f4;
+  text-shadow: 2px 4px 5px black;
+  font-size: 2.8rem;
+  word-spacing: 0.5rem;
+  letter-spacing: 0.4rem;
+  height: 25rem;
+  width: 35rem;
+  margin-right: 3.5rem;
+  margin-left: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner__contacto button {
+  width: 100px;
+  height: 45px;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 480px) {
+  .banner__contacto a {
+    margin-top: 3rem;
+  }
+}
+
+/*links a servicios*/
+.servicios__texto {
+  color: #000;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.servicios__img {
+  width: 12rem;
+  height: auto;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+  background-color: 1s;
+  border-radius: 5%;
+  padding: 1.3rem;
+  -webkit-transition: scale;
+  transition: scale;
+}
+
+/*transicion servicios*/
+.servicios__img:hover {
+  -webkit-transform: scale(1.3, 1.3);
+          transform: scale(1.3, 1.3);
+}
+
+@media only screen and (max-width: 576px) {
+  .banner__contacto {
+    font-size: 2.3rem;
+  }
+  .banner__contacto button {
+    width: 80px;
+    height: 40px;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+}
+
+.formulario__contacto {
+  font-family: "Montserrat", sans-serif;
+  color: #2b2d42;
+  font-size: 1.8rem;
+}
+
+.boton {
+  font-size: 1.5rem;
+}
+
+.boton:hover {
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/*foto+texto*/
+.divNosotros {
+  border-bottom: dotted 0.5rem #2b2d42;
+}
+
+.divNosotros__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3rem;
+}
+
+.divNosotros__img .main__imgNosotros {
+  width: 85%;
+  height: auto;
+  border-radius: 5%;
+  margin: 0px;
+  -webkit-box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.3);
+}
+
+.divNosotros .main__texto__nosotros {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.divNosotros .main__texto__nosotros .main__textoNosotros {
+  font-size: 2.2rem;
+  font-family: "Montserrat", sans-serif;
+  color: #2b2d42;
+  padding: 1rem;
+}
+
+@media (max-width: 480px) {
+  .divNosotros .main__texto__nosotros .main__textoNosotros {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+/*contacto*/
+.row__parrafoUbicacion {
+  color: #2b2d42;
+  background-color: #edf2f4;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.5rem;
+  margin: 2rem;
+}
+
+@media (max-width: 480px) {
+  .row__parrafoUbicacion {
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem 0 0 0;
+  }
+}
+
+.row__parrafoUbicacion .main__mapa--mod {
+  border: 2px solid #2b2d42;
+  -webkit-box-shadow: 2px 5px 10px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 5px 10px 3px rgba(0, 0, 0, 0.3);
+  margin-top: 1rem;
+  width: 70%;
+}
+
+@media (max-width: 480px) {
+  .row__parrafoUbicacion .main__mapa--mod {
+    width: 70%;
+  }
+}
+
+.row__parrafoUbicacionContacto {
+  margin-top: 5rem;
+}
+
+.row__parrafoUbicacionContacto p {
+  margin: 1rem;
+  color: #2b2d42;
+  font-family: "Montserrat", sans-serif;
+}
+
+.row__parrafoUbicacionContacto p a {
+  text-decoration: none;
+  color: #2b2d42;
+  text-align: center;
+}
+
+.row__parrafoUbicacionContacto p i {
+  text-shadow: 0.1rem 0.1rem #d90429;
+}
+
+/*trabaja con nosotros*/
+.trabajaConNosotros {
+  font-family: "Montserrat", sans-serif;
+  color: #2b2d42;
+  font-size: 1.8rem;
+  margin: 3rem;
+  border: solid 3px #2b2d42;
+  border-style: double;
+  padding: 2rem;
+  background: #edf2f4;
+  background: linear-gradient(176deg, #edf2f4 36%, rgba(239, 35, 60, 0.376053) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#edf2f4", endColorstr="#ef233c", GradientType=1);
+}
+
+.trabajaConNosotros__estilo {
+  color: #d90429;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 480px) {
+  .trabajaConNosotros {
+    width: 80%;
+    font-size: 1.5rem;
+  }
+}
+
+/*texto principal*/
+.main__texto__st {
+  font-size: 2.3rem;
+  font-family: "Montserrat", sans-serif;
+  color: #2b2d42;
+  padding: 3rem;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    text-align: center;
+  }
+}
+
+/*grilla*/
+.grid {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "grid__img7 grid__img1 grid__img4" "grid__img7 grid__img3 grid__img2" "grid__img6 grid__img5 grid__img5";
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  margin: 4rem;
+}
+
+@media (max-width: 480px) {
+  .grid {
+        grid-template-areas: "grid__img1" "grid__img2" "grid__img3" "grid__img4" "grid__img5" "grid__img6" "grid__img7";
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+}
+
+.grillita {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.grid__img1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: grid__img1;
+  -webkit-transition: scale;
+  transition: scale;
+}
+
+.grid__img1:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.grid__img2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: grid__img2;
+  -webkit-transition: scale;
+  transition: scale;
+}
+
+.grid__img2:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.grid__img3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: grid__img3;
+  -webkit-transition: scale;
+  transition: scale;
+}
+
+.grid__img3:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.grid__img4 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: grid__img4;
+  -webkit-transition: scale;
+  transition: scale;
+}
+
+.grid__img4:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.grid__img5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: grid__img5;
+  -webkit-transition: scale;
+  transition: scale;
+}
+
+.grid__img5:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.grid__img6 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: grid__img6;
+  -webkit-transition: scale;
+  transition: scale;
+}
+
+.grid__img6:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.grid__img7 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: grid__img7;
+  -webkit-transition: scale;
+  transition: scale;
+}
+
+.grid__img7:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+/*estilo imagenes*/
+.grid__imagenEstilos {
+  width: 100%;
+  height: 100%;
+  padding: 0.3rem;
+  border-radius: 5%;
+}
+
+/*texto principal*/
+.main__texto__alarmas {
+  font-size: 2.3rem;
+  font-family: "Montserrat", sans-serif;
+  color: #2b2d42;
+  padding: 3rem;
+}
+
+/*carrusel*/
+.div__carrusel {
+  margin: 3rem;
+}
+
+.carousel-caption h3 {
+  color: #d90429;
+  font-weight: bold;
+  background-color: #edf2f4;
+  padding: 1rem;
+}
+
+.calesita {
+  width: 100%;
+  height: 50rem;
+}
+
+/*descripcion en texto*/
+.descripcionServicios {
+  font-size: 2.3rem;
+  font-family: "Montserrat", sans-serif;
+  color: #2b2d42;
+  padding: 3rem;
+  line-height: 3.5rem;
+  border: solid 2px #d90429;
+  background-color: rgba(141, 153, 174, 0.2);
+  margin: 2rem;
+}
+
+@media (max-width: 480px) {
+  .descripcionServicios .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.main__textoCamaras p, .row__textoCierre p {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  color: #2b2d42;
+  text-align: center;
+  margin: 3rem;
+}
+
+.main__textoCamaras h3, .row__textoCierre h3 {
+  font-size: 3.5rem;
+  font-family: "Montserrat", sans-serif;
+  color: #d90429;
+  text-align: center;
+  margin-top: 2rem;
+  text-shadow: 0.1rem 0.1rem #8d99ae;
+}
+
+/*imagenes y precios*/
+.rowCamaras {
+  margin: 2rem;
+}
+
+.rowCamaras__img {
+  width: 100%;
+  -webkit-box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 15%;
+  margin-bottom: 2rem;
+}
+
+.rowCamaras__precioTexto {
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  color: #2b2d42;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.rowCamaras__precio {
+  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  color: #d90429;
+  font-weight: bolder;
+  text-shadow: 0.1rem 0.1rem #8d99ae;
+  -webkit-animation: heartbeat 5s ease-in-out 3s infinite both;
+  animation: heartbeat 5s ease-in-out 3s infinite both;
+}
+
+@media (max-width: 480px) {
+  .rowCamaras__col {
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+}
+
+.row__textoCierre {
+  border-bottom: dotted 0.5rem #2b2d42;
+}
+
+/*marcas de camaras*/
+.row__textoMarcas {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  color: #2b2d42;
+  margin: 2rem 2rem 3rem 2rem;
+}
+
+@media (max-width: 480px) {
+  .row__textoMarcas {
+    text-align: center;
+  }
+}
+
+.row__textoMarcas h4 {
+  color: #d90429;
+  font-size: 3.5rem;
+  text-shadow: 0.1rem 0.1rem #8d99ae;
+}
+
+.rowMarcas {
+  margin-bottom: 2rem;
+}
+
+.rowMarcas__media {
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+  margin: 1rem;
+  -webkit-box-shadow: 2px 3px 10px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 3px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+/*animacion precios*/
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+/*# sourceMappingURL=main.css.map */
