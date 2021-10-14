@@ -1,29 +1,68 @@
+.chauPadding {
+	padding: 0px;
+}
+
 .footer {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
 	background-color: $rojo;
 	color: $blanco;
 	font-family: $fuenteO;
-	margin-top: 2rem;
-	padding: 1.5rem;
 	border-top: solid 1rem $azul;
 	letter-spacing: 0.2rem;
-	font-size: $tamFuente+1.5;
-	font-style: normal;
-	font-weight: bold;
-
+	font-size: ($tamFuente)-0.4;
 	&__redes {
-		margin: 2rem;
-		font-size: $tamFuente+1.2;
-		display: flex;
-		justify-content: center;
+		padding: 2rem;
 		a {
 			color: $azul;
 			margin: 0 3rem;
+			font-size: $tamFuente+1.2;
 		}
 		a:hover {
 			color: $gris;
 		}
+		h3 {
+			text-align: center;
+			text-decoration: underline;
+		}
+		@include telefono {
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+	}
+	&__redes--whatsapp {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		a {
+			font-size: $tamFuente+2;
+		}
+	}
+	@include telefono {
+		display: flex;
+		flex-direction: column;
 	}
 }
-.chauPadding {
-	padding: 0px;
+
+.contenedor__logoFooter {
+	@extend .contenedor__logo;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.logo {
+		border-radius: 50%;
+		width: 7rem;
+		height: 7rem;
+	}
+}
+
+.derechos {
+	background-color: $rojo;
+	color: $blanco;
+	font-family: $fuenteO;
+	font-size: ($tamFuente)-0.8;
+	display: flex;
+	justify-content: center;
 }

@@ -94,7 +94,7 @@ header {
 }
 
 /*logo*/
-.contenedor__logo {
+.contenedor__logo, .contenedor__logoFooter {
   overflow: hidden;
   margin-left: 2rem;
   margin-right: 3rem;
@@ -102,7 +102,7 @@ header {
   margin-bottom: 1rem;
 }
 
-.contenedor__logo .logo {
+.contenedor__logo .logo, .contenedor__logoFooter .logo {
   border-radius: 50%;
   width: 10rem;
   height: 10rem;
@@ -216,41 +216,116 @@ header {
   color: #d90429;
 }
 
-.footer {
-  background-color: #d90429;
-  color: #edf2f4;
-  font-family: "Oswald", sans-serif;
-  margin-top: 2rem;
-  padding: 1.5rem;
-  border-top: solid 1rem #2b2d42;
-  letter-spacing: 0.2rem;
-  font-size: 3rem;
-  font-style: normal;
-  font-weight: bold;
+.chauPadding {
+  padding: 0px;
 }
 
-.footer__redes {
-  margin: 2rem;
-  font-size: 2.7rem;
+.footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #d90429;
+  color: #edf2f4;
+  font-family: "Oswald", sans-serif;
+  border-top: solid 1rem #2b2d42;
+  letter-spacing: 0.2rem;
+  font-size: 1.1rem;
+}
+
+.footer__redes {
+  padding: 2rem;
 }
 
 .footer__redes a {
   color: #2b2d42;
   margin: 0 3rem;
+  font-size: 2.7rem;
 }
 
 .footer__redes a:hover {
   color: #8d99ae;
 }
 
-.chauPadding {
-  padding: 0px;
+.footer__redes h3 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .footer__redes {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+
+.footer__redes--whatsapp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__redes--whatsapp a {
+  font-size: 3.5rem;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.contenedor__logoFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedor__logoFooter .logo {
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+}
+
+.derechos {
+  background-color: #d90429;
+  color: #edf2f4;
+  font-family: "Oswald", sans-serif;
+  font-size: 0.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /*div formulario*/
