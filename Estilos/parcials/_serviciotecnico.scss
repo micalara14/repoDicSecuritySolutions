@@ -85,4 +85,7 @@ h1 {
 	height: 100%;
 	padding: 0.3rem;
 	border-radius: 5%;
+	@include telefono {
+		height: auto;
+	}
 }

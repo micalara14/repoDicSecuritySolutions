@@ -707,6 +707,12 @@ header {
   border-radius: 5%;
 }
 
+@media (max-width: 480px) {
+  .grid__imagenEstilos {
+    height: auto;
+  }
+}
+
 .filasAlarmas {
   margin-bottom: 5rem;
   margin-top: 3rem;
