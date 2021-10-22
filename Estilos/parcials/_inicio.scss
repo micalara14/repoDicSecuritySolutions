@@ -21,6 +21,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		text-align: center;
 		button {
 			width: 100px;
 			height: 45px;
@@ -34,7 +35,35 @@
 		}
 	}
 }
-
+/*medios de pago*/
+.textoPagos {
+	font-family: $fuenteO;
+	display: flex;
+	justify-content: center;
+	padding-top: 1rem;
+	font-size: $tamFuente;
+	p {
+		margin: 0px;
+		color: $azul;
+	}
+}
+.mediosPago {
+	display: flex;
+	box-sizing: border-box;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2rem;
+	&__img {
+		width: 30%;
+		padding: 1rem;
+		@include telefono {
+			width: 100%;
+		}
+		@include tablet {
+			width: 100%;
+		}
+	}
+}
 /*links a servicios*/
 .servicios__texto {
 	color: #000;

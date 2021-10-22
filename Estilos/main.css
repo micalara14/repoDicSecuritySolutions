@@ -359,6 +359,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 .banner__contacto button {
@@ -371,6 +372,56 @@ header {
 @media (max-width: 480px) {
   .banner__contacto a {
     margin-top: 3rem;
+  }
+}
+
+/*medios de pago*/
+.textoPagos {
+  font-family: "Oswald", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.textoPagos p {
+  margin: 0px;
+  color: #2b2d42;
+}
+
+.mediosPago {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.mediosPago__img {
+  width: 30%;
+  padding: 1rem;
+}
+
+@media (max-width: 480px) {
+  .mediosPago__img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .mediosPago__img {
+    width: 100%;
   }
 }
 
