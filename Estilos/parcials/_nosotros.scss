@@ -18,7 +18,7 @@
 		align-items: center;
 		justify-content: center;
 		.main__textoNosotros {
-			font-size: $tamFuente+0.7;
+			font-size: $tamFuente+0.9;
 			font-family: $fuenteM;
 			color: $azul;
 			padding: 1rem;
@@ -36,7 +36,7 @@
 	font-family: $fuenteM;
 	font-style: normal;
 	font-weight: normal;
-	font-size: $tamFuente+1;
+	font-size: $tamFuente+0.7;
 	margin: 2rem;
 
 	@include telefono {

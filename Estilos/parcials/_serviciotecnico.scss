@@ -36,6 +36,9 @@ h1 {
 }
 .grid__img1:hover {
 	transform: scale(1.1, 1.1);
+	@include telefono {
+		transform: none;
+	}
 }
 .grid__img2 {
 	grid-area: grid__img2;
@@ -43,6 +46,9 @@ h1 {
 }
 .grid__img2:hover {
 	transform: scale(1.1, 1.1);
+	@include telefono {
+		transform: none;
+	}
 }
 .grid__img3 {
 	grid-area: grid__img3;
@@ -50,6 +56,9 @@ h1 {
 }
 .grid__img3:hover {
 	transform: scale(1.1, 1.1);
+	@include telefono {
+		transform: none;
+	}
 }
 .grid__img4 {
 	grid-area: grid__img4;
@@ -57,6 +66,9 @@ h1 {
 }
 .grid__img4:hover {
 	transform: scale(1.1, 1.1);
+	@include telefono {
+		transform: none;
+	}
 }
 .grid__img5 {
 	grid-area: grid__img5;
@@ -64,6 +76,9 @@ h1 {
 }
 .grid__img5:hover {
 	transform: scale(1.1, 1.1);
+	@include telefono {
+		transform: none;
+	}
 }
 .grid__img6 {
 	grid-area: grid__img6;
@@ -71,6 +86,9 @@ h1 {
 }
 .grid__img6:hover {
 	transform: scale(1.1, 1.1);
+	@include telefono {
+		transform: none;
+	}
 }
 .grid__img7 {
 	grid-area: grid__img7;
@@ -78,6 +96,9 @@ h1 {
 }
 .grid__img7:hover {
 	transform: scale(1.1, 1.1);
+	@include telefono {
+		transform: none;
+	}
 }
 /*estilo imagenes*/
 .grid__imagenEstilos {

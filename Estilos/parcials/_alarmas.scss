@@ -1,6 +1,16 @@
 .main__textoAlarmas {
 	@extend .main__textoCamaras;
 }
+.contenedorAlarmas {
+	background-image: url(../../Imagenes/fondo-alarmas.png);
+	background-size: cover;
+	background-position: cover;
+	background-repeat: no-repeat;
+	margin: 3rem;
+	padding: 1.5rem;
+	border-radius: 5%;
+	box-shadow: 5px 5px 10px 8px rgba(0, 0, 0, 0.3);
+}
 .filasAlarmas {
 	margin-bottom: 5rem;
 	margin-top: 3rem;
@@ -18,6 +28,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		background-color: $blanco;
+
 		img {
 			width: 100%;
 			padding: 1rem;

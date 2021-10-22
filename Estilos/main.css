@@ -468,7 +468,7 @@ header {
 }
 
 .formulario__contacto {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #2b2d42;
   font-size: 1.8rem;
 }
@@ -519,8 +519,8 @@ header {
 }
 
 .divNosotros .main__texto__nosotros .main__textoNosotros {
-  font-size: 2.2rem;
-  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  font-family: "Quicksand", sans-serif;
   color: #2b2d42;
   padding: 1rem;
 }
@@ -536,10 +536,10 @@ header {
 .row__parrafoUbicacion {
   color: #2b2d42;
   background-color: #edf2f4;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin: 2rem;
 }
 
@@ -572,7 +572,7 @@ header {
 .row__parrafoUbicacionContacto p {
   margin: 1rem;
   color: #2b2d42;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .row__parrafoUbicacionContacto p a {
@@ -587,7 +587,7 @@ header {
 
 /*trabaja con nosotros*/
 .trabajaConNosotros {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #2b2d42;
   font-size: 1.8rem;
   margin: 3rem;
@@ -615,7 +615,7 @@ header {
 /*texto principal*/
 .main__texto__st {
   font-size: 2.3rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #2b2d42;
   padding: 3rem;
 }
@@ -670,6 +670,13 @@ header {
           transform: scale(1.1, 1.1);
 }
 
+@media (max-width: 480px) {
+  .grid__img1:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
 .grid__img2 {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
@@ -681,6 +688,13 @@ header {
 .grid__img2:hover {
   -webkit-transform: scale(1.1, 1.1);
           transform: scale(1.1, 1.1);
+}
+
+@media (max-width: 480px) {
+  .grid__img2:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 .grid__img3 {
@@ -696,6 +710,13 @@ header {
           transform: scale(1.1, 1.1);
 }
 
+@media (max-width: 480px) {
+  .grid__img3:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
 .grid__img4 {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
@@ -707,6 +728,13 @@ header {
 .grid__img4:hover {
   -webkit-transform: scale(1.1, 1.1);
           transform: scale(1.1, 1.1);
+}
+
+@media (max-width: 480px) {
+  .grid__img4:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 .grid__img5 {
@@ -723,6 +751,13 @@ header {
           transform: scale(1.1, 1.1);
 }
 
+@media (max-width: 480px) {
+  .grid__img5:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
 .grid__img6 {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
@@ -734,6 +769,13 @@ header {
 .grid__img6:hover {
   -webkit-transform: scale(1.1, 1.1);
           transform: scale(1.1, 1.1);
+}
+
+@media (max-width: 480px) {
+  .grid__img6:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 .grid__img7 {
@@ -750,6 +792,13 @@ header {
           transform: scale(1.1, 1.1);
 }
 
+@media (max-width: 480px) {
+  .grid__img7:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
 /*estilo imagenes*/
 .grid__imagenEstilos {
   width: 100%;
@@ -762,6 +811,18 @@ header {
   .grid__imagenEstilos {
     height: auto;
   }
+}
+
+.contenedorAlarmas {
+  background-image: url(../../Imagenes/fondo-alarmas.png);
+  background-size: cover;
+  background-position: cover;
+  background-repeat: no-repeat;
+  margin: 3rem;
+  padding: 1.5rem;
+  border-radius: 5%;
+  -webkit-box-shadow: 5px 5px 10px 8px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 10px 8px rgba(0, 0, 0, 0.3);
 }
 
 .filasAlarmas {
@@ -795,6 +856,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #edf2f4;
 }
 
 .filasAlarmas .col__contenedorImgAlarmas img {
@@ -809,7 +871,7 @@ header {
 
 .col--parrafoAlarmas {
   font-size: 2rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #2b2d42;
   text-align: center;
   font-weight: bold;
@@ -839,7 +901,7 @@ header {
 
 .parrafoCierreAlarmas {
   font-size: 2rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #d90429;
   text-align: center;
   margin-top: 2rem;
@@ -850,7 +912,7 @@ header {
 
 .main__textoCamaras p, .main__textoAlarmas p, .row__textoCierre p {
   font-size: 2rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #2b2d42;
   text-align: center;
   margin: 3rem;
@@ -858,7 +920,7 @@ header {
 
 .main__textoCamaras h3, .main__textoAlarmas h3, .row__textoCierre h3 {
   font-size: 3.5rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #d90429;
   text-align: center;
   margin-top: 2rem;
@@ -880,7 +942,7 @@ header {
 
 .rowCamaras__precioTexto {
   font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #2b2d42;
   text-transform: uppercase;
   text-align: center;
@@ -888,7 +950,7 @@ header {
 
 .rowCamaras__precio, .alarmasPrecio {
   font-size: 2.5rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #d90429;
   font-weight: bolder;
   text-shadow: 0.1rem 0.1rem #8d99ae;
@@ -910,7 +972,7 @@ header {
 /*marcas de camaras*/
 .row__textoMarcas {
   font-size: 2rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #2b2d42;
   text-align: center;
   margin: 2rem 2rem 3rem 2rem;
