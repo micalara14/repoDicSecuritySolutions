@@ -3,7 +3,21 @@
 	color: $azul;
 	font-size: $tamFuente+0.3;
 	@include telefono {
-		font-size: $tamFuente+5;
+		font-size: ($tamFuente);
+		text-align: center;
+	}
+}
+form {
+	display: flex;
+	justify-content: center;
+	.formulario {
+		width: 70%;
+	}
+	@include telefono {
+		font-size: $tamFuente+1;
+		.formulario {
+			width: 100%;
+		}
 	}
 }
 .boton {
