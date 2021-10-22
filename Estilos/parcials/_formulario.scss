@@ -2,6 +2,9 @@
 	font-family: $fuenteM;
 	color: $azul;
 	font-size: $tamFuente+0.3;
+	@include telefono {
+		font-size: $tamFuente+5;
+	}
 }
 .boton {
 	font-size: $tamFuente;
