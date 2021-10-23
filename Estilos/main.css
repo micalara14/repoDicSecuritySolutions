@@ -1,5 +1,7 @@
+@charset "UTF-8";
 /*colores*/
 /*fuentes*/
+/*padding*/
 /*reseteo*/
 * {
   margin: 0;
@@ -32,7 +34,7 @@ body {
 }
 
 /*titulos paginas*/
-.titulos__paginas {
+.titulos__paginas, .textoAlarmas__titulos, .textoCamaras__titulo {
   color: #2b2d42;
   font-family: "Oswald", sans-serif;
   letter-spacing: 0.4rem;
@@ -45,12 +47,12 @@ body {
   margin: 2rem;
 }
 
-.titulos__paginas .h1Html {
+.titulos__paginas .h1Html, .textoAlarmas__titulos .h1Html, .textoCamaras__titulo .h1Html {
   font-size: 6rem;
 }
 
 /*animacion titulos*/
-.titulos__paginas {
+.titulos__paginas, .textoAlarmas__titulos, .textoCamaras__titulo {
   -webkit-animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
           animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
@@ -842,90 +844,39 @@ form .formulario {
   }
 }
 
-.contenedorAlarmas {
-  background-image: url(../Imagenes/fondo-alarmas.png);
+.textoAlarmas {
+  background-image: url(../../Imagenes/fondo-prueba-2.jpg);
+  background-position: center;
   background-size: cover;
-  background-position: cover;
-  background-repeat: no-repeat;
-  margin: 3rem;
-  padding: 1.5rem;
-  border-radius: 5%;
-  -webkit-box-shadow: 5px 5px 10px 8px rgba(0, 0, 0, 0.3);
-          box-shadow: 5px 5px 10px 8px rgba(0, 0, 0, 0.3);
+  padding: 10rem;
+  margin-bottom: 3rem;
 }
 
-.filasAlarmas {
-  margin-bottom: 5rem;
-  margin-top: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.textoAlarmas__titulos {
+  color: #edf2f4;
 }
 
-.filasAlarmas .col__contenedorImgAlarmas {
-  width: 20rem;
-  height: 20rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
-  border: solid 2px #d90429;
-  border-radius: 10%;
-  -webkit-box-shadow: 2px 5px 10px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 5px 10px 3px rgba(0, 0, 0, 0.3);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #edf2f4;
-}
-
-.filasAlarmas .col__contenedorImgAlarmas img {
-  width: 100%;
-  padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.col--parrafoAlarmas {
-  font-size: 2rem;
+.textoAlarmas p {
+  font-size: 2.5rem;
+  text-shadow: black 2px 2px;
   font-family: "Quicksand", sans-serif;
-  color: #2b2d42;
+  color: #edf2f4;
   text-align: center;
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1.5rem;
+  margin: 3rem;
 }
 
-.alarmasPrecio {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media (max-width: 480px) {
+  .textoAlarmas p {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 2rem 0 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .textoAlarmas {
+    padding: 7rem;
+  }
 }
 
 .parrafoCierreAlarmas {
@@ -939,37 +890,55 @@ form .formulario {
   margin: 2rem;
 }
 
-.main__textoCamaras p, .main__textoAlarmas p, .row__textoCierre p {
-  font-size: 2rem;
+.textoCamaras {
+  background-image: url(../../Imagenes/fondo-prueba.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 6.5rem;
+  margin-bottom: 3rem;
+}
+
+.textoCamaras__titulo {
+  color: #edf2f4;
+}
+
+.textoCamaras p {
+  font-size: 2.5rem;
+  text-shadow: black 2px 2px;
   font-family: "Quicksand", sans-serif;
-  color: #2b2d42;
+  color: #edf2f4;
   text-align: center;
   margin: 3rem;
 }
 
-.main__textoCamaras h3, .main__textoAlarmas h3, .row__textoCierre h3 {
-  font-size: 3.5rem;
-  font-family: "Quicksand", sans-serif;
-  color: #d90429;
-  text-align: center;
-  margin-top: 2rem;
-  text-shadow: 0.1rem 0.1rem #8d99ae;
+@media (max-width: 480px) {
+  .textoCamaras p {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 2rem 0 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .textoCamaras {
+    padding: 4.5rem;
+  }
 }
 
 /*imagenes y precios*/
-.rowCamaras {
+.rowCamaras, .rowAlarmas {
   margin: 2rem;
 }
 
-.rowCamaras__img {
-  width: 100%;
+.rowCamaras__img, .rowAlarmas__img {
+  width: 70%;
   -webkit-box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.3);
   border-radius: 15%;
   margin-bottom: 2rem;
 }
 
-.rowCamaras__precioTexto {
+.rowCamaras__precioTexto, .rowAlarmas__precioTexto {
   font-size: 1.5rem;
   font-family: "Quicksand", sans-serif;
   color: #2b2d42;
@@ -977,7 +946,7 @@ form .formulario {
   text-align: center;
 }
 
-.rowCamaras__precio, .alarmasPrecio {
+.rowCamaras__precio, .rowAlarmas__texto {
   font-size: 2.5rem;
   font-family: "Quicksand", sans-serif;
   color: #d90429;
@@ -987,7 +956,7 @@ form .formulario {
   animation: heartbeat 5s ease-in-out 3s infinite both;
 }
 
-.rowCamaras__col {
+.rowCamaras__col, .rowAlarmas__col {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -998,10 +967,13 @@ form .formulario {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 480px) {
-  .rowCamaras__col {
+  .rowCamaras__col, .rowAlarmas__col {
     margin-top: 3.5rem;
     margin-bottom: 3.5rem;
   }
@@ -1009,6 +981,18 @@ form .formulario {
 
 .row__textoCierre {
   border-bottom: solid 0.5rem #2b2d42;
+  font-size: 2.5rem;
+  font-family: "Quicksand", sans-serif;
+  color: #2b2d42;
+  text-align: center;
+  margin: 3rem 0 3rem 0;
+}
+
+/*modal*/
+@media (max-width: 480px) {
+  .formularioModal {
+    font-size: 1.5rem;
+  }
 }
 
 /*marcas de camaras*/
@@ -1044,14 +1028,15 @@ form .formulario {
 }
 
 .rowMarcas__img--marca {
-  width: 100%;
+  width: 50%;
   height: 20rem;
-  border-radius: 50%;
+  border-radius: 20%;
   -webkit-box-shadow: 2px 3px 10px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 2px 3px 10px 5px rgba(0, 0, 0, 0.3);
   margin: 1rem;
 }
 
+/*tecnología*/
 .rowTecnologia__media {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;

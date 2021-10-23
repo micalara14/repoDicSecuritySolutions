@@ -1,59 +1,45 @@
-.main__textoAlarmas {
-	@extend .main__textoCamaras;
-}
-.contenedorAlarmas {
-	background-image: url(../Imagenes/fondo-alarmas.png);
+.textoAlarmas {
+	background-image: url(../../Imagenes/fondo-prueba-2.jpg);
+	background-position: center;
 	background-size: cover;
-	background-position: cover;
-	background-repeat: no-repeat;
-	margin: 3rem;
-	padding: 1.5rem;
-	border-radius: 5%;
-	box-shadow: 5px 5px 10px 8px rgba(0, 0, 0, 0.3);
-}
-.filasAlarmas {
-	margin-bottom: 5rem;
-	margin-top: 3rem;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	.col__contenedorImgAlarmas {
-		width: 20rem;
-		height: 20rem;
-		margin-left: 3rem;
-		margin-right: 3rem;
-		border: solid 2px $rojo;
-		border-radius: 10%;
-		box-shadow: 2px 5px 10px 3px rgba(0, 0, 0, 0.3);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background-color: $blanco;
-
-		img {
-			width: 100%;
-			padding: 1rem;
-			display: flex;
-			box-sizing: border-box;
+	padding: 10rem;
+	margin-bottom: 3rem;
+	&__titulos {
+		@extend .titulos__paginas;
+		color: $blanco;
+	}
+	p {
+		font-size: $tamFuente+1;
+		text-shadow: black 2px 2px;
+		font-family: $fuenteM;
+		color: $blanco;
+		text-align: center;
+		margin: 3rem;
+		@include telefono {
+			font-size: $tamFuente+0.3;
+			text-align: center;
+			margin: 2rem 0 0 0;
 		}
 	}
+	@include telefono {
+		padding: 7rem;
+	}
 }
-.col--parrafoAlarmas {
-	font-size: $tamFuente+0.5;
-	font-family: $fuenteM;
-	color: $azul;
-	text-align: center;
-	font-weight: bold;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 1.5rem;
-}
-.alarmasPrecio {
-	@extend .rowCamaras__precio;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+
+.rowAlarmas {
+	@extend .rowCamaras;
+	&__col {
+		@extend .rowCamaras__col;
+	}
+	&__img {
+		@extend .rowCamaras__img;
+	}
+	&__precioTexto {
+		@extend .rowCamaras__precioTexto;
+	}
+	&__texto {
+		@extend .rowCamaras__precio;
+	}
 }
 .parrafoCierreAlarmas {
 	font-size: $tamFuente+0.5;

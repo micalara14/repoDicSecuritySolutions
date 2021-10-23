@@ -17,6 +17,34 @@
     <link rel="stylesheet" href="Estilos/main.css">
 </head>
 <!-- body -->
+<!-- modals -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">DEJANOS TUS DATOS Y TE CONTACTAREMOS</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form class="d-flex flex-column formularioModal">
+                    <div>
+                        <label for="nombre" class="form-label m-3">Nombre</label>
+                        <input type="text" id="nombre" class="form-control">
+                    </div>
+                    <div>
+                        <label for="mailTelefono" class="form-label m-3">Email o teléfono</label>
+                        <input type="text" id="mailTelefono" class="form-control">
+                    </div>
+                    <div>
+                        <label for="consulta" class="form-label m-3">Consulta</label>
+                        <textarea class="form-control" id="consulta"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-danger m-3">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <body>
 <div class="container-fluid">
 <!-- header -->
@@ -58,53 +86,33 @@
 </header>
 <!-- main -->
 <main>
-<!-- titulo -->
-    <div clas="row">
-        <div class="col">
-        <div class="titulos__paginas"><h1 class=h1Html>Alarmas</h1></div>
-        </div>
-    </div>
 <!-- contenido texto -->
-<div class="row main__textoAlarmas">
+<div class="row textoAlarmas">
     <div class="col">
+        <div class="textoAlarmas__titulos"><h1 class=h1Html>Alarmas</h1></div>
         <p>Conocé nuestros kits más solicitados.<br><b>Los precios incluyen instalación. Aceptamos todos los medios de pago.</b></p>
     </div>
 </div>
 <!-- precio alarmas -->
-<div class="contenedorAlarmas">
-<div class="row filasAlarmas" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true">
-    <div class="col-md-3 col-sm-12 col__contenedorImgAlarmas">
-        <img src="Imagenes/alarmas-cableadas.png" alt="alarmas cableadas">
+<div class="row rowAlarmas">
+    <div class="col-md-4 col-sm-12 rowAlarmas__col" data-aos="flip-left" data-aos-duration="1000" data-aos-once="true">
+        <img alt="alarma cableada" src="./Imagenes/alarma-cableada.png" class="rowAlarmas__img">
+        <p class="d-flex justify-content-center mt-3 rowAlarmas__precioTexto"><b>ALARMAS CABLEADAS</b></p>
+        <p class="d-flex justify-content-center rowAlarmas__precio">$30.000 ARS</p>
+        <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#myModal">+ INFO</button>
     </div>
-    <div class="col-md-6 col-sm-12 col--parrafoAlarmas">
-        <p>KIT ALARMA 2.2 SENSORES CABLEADOS<br>Incluye placa 1832, gabinete, sirena interior, teclado LCD, batería 12V, transformador 16V, sensor de movimiento x2 y sensor de puertas/ventanas x2.</p>
+    <div class="col-md-4 col-sm-12 rowAlarmas__col" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true">
+        <img alt="alarma inalambrica" src="./Imagenes/alarma-inalambrica.png" class="rowAlarmas__img">
+        <p class="d-flex justify-content-center mt-3 rowAlarmas__precioTexto"><b>ALARMAS INALÁMBRICAS</b></p>
+        <p class="d-flex justify-content-center rowAlarmas__precio">$45.000 ARS</p>
+    <button type="button" class="btn btn-danger btn-lg botonModal" data-bs-toggle="modal" data-bs-target="#myModal">+ INFO</button>
     </div>
-    <div class="col-md-3 col-sm-12 alarmasPrecio">
-        <p>$39000 ARS</p>
+    <div class="col-md-4 col-sm-12 rowAlarmas__col" data-aos="flip-right" data-aos-duration="1000" data-aos-once="true">
+        <img alt="boton de panico" src="./Imagenes/boton-panico.png" class="rowAlarmas__img">
+        <p class="d-flex justify-content-center mt-3 rowAlarmas__precioTexto"><b>BOTON DE PÁNICO</b></p>
+        <p class="d-flex justify-content-center rowAlarmas__precio">$6.500 ARS</p>
+        <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#myModal">+ INFO</button>
     </div>
-</div>
-<div class="row filasAlarmas" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true">
-    <div class="col-md-3 col-sm-12 col__contenedorImgAlarmas">
-        <img src="Imagenes/alarmas-wifi.png" alt="alarmas wifi">
-    </div>
-    <div class="col-md-6 col-sm-12 col--parrafoAlarmas">
-        <p>KIT ALARMA 2.2 SENSORES INALÁMBRICOS<br>Incluye receptora, placa 1832, gabinete, sirena interior, teclado LCD, batería 12V, transformador 16V, sensor de movimiento inalámbrico x2 y sensor de puertas/ventanas inalámbrico x2.</p>
-    </div>
-    <div class="col-md-3 col-sm-12 alarmasPrecio">
-        <p>$56000 ARS</p>
-    </div>
-</div>
-<div class="row filasAlarmas" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true">
-    <div class="col-md-3 col-sm-12 col__contenedorImgAlarmas">
-        <img src="Imagenes/boton-panico.png" alt="boton de panico">
-    </div>
-    <div class="col-md-6 col-sm-12 col--parrafoAlarmas">
-        <p>BOTON DE PÁNICO<br>Incluye botón, juego de llave para desactivación, sirena y fuente 12V 1A. Al presionar el botón manualmente se activa la sirena.</p>
-    </div>
-    <div class="col-md-3 col-sm-12 alarmasPrecio">
-        <p>$5500 ARS</p>
-    </div>
-</div>
 </div>
 <!-- texto cierre -->
 <div class="row">

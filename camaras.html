@@ -18,8 +18,36 @@
 </head>
 <!-- body -->
 <body>
+<!-- modals -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">DEJANOS TUS DATOS Y TE CONTACTAREMOS</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="d-flex flex-column formularioModal">
+                        <div>
+                            <label for="nombre" class="form-label m-3">Nombre</label>
+                            <input type="text" id="nombre" class="form-control">
+                        </div>
+                        <div>
+                            <label for="mailTelefono" class="form-label m-3">Email o teléfono</label>
+                            <input type="text" id="mailTelefono" class="form-control">
+                        </div>
+                        <div>
+                            <label for="consulta" class="form-label m-3">Consulta</label>
+                            <textarea class="form-control" id="consulta"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-danger m-3">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid">
-        <!-- header -->
+<!-- header -->
 <header>
     <div class="row">
         <div class="col chauPadding">
@@ -58,16 +86,10 @@
 </header>
 <!-- main -->
         <main>
-<!-- titulo -->
-            <div clas="row">
-                <div class="col">
-                <div class="titulos__paginas"><h1 class=h1Html>Cámaras</h1></div>
-                </div>
-            </div>
 <!-- camaras wifi -->
-            <div class="row main__textoCamaras">
+            <div class="row textoCamaras">
                 <div class="col">
-                    <h3>Cámaras WIFI</h3>
+                    <div class="textoCamaras__titulo"><h1 class=h1Html>Cámaras</h1></div>s
                     <p>Cámaras con conexión WIFI/LAN que permiten almacenar videos en memorias SD y ver en tiempo real desde la aplicación.<br><b>Los precios incluyen instalación. Aceptamos todos los medios de pago.</b></p>
                 </div>
             </div>
@@ -76,16 +98,19 @@
                     <img alt="camara wifi 1" src="./Imagenes/camara-wifi-1.png" class="rowCamaras__img">
                     <p class="d-flex justify-content-center mt-3 rowCamaras__precioTexto"><b>Cámara WIFI con visión nocturna</b></p>
                     <p class="d-flex justify-content-center rowCamaras__precio">$11.500 ARS</p>
+                    <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#myModal">+ INFO</button>
                 </div>
                 <div class="col-md-4 col-sm-12 rowCamaras__col" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true">
                     <img alt="camara wifi 2" src="./Imagenes/camara-wifi-2.png" class="rowCamaras__img">
                     <p class="d-flex justify-content-center mt-3 rowCamaras__precioTexto"><b>Cámara WIFI con visión nocturna, luz y parlante</b></p>
                     <p class="d-flex justify-content-center rowCamaras__precio">$21.000 ARS</p>
+                <button type="button" class="btn btn-danger btn-lg botonModal" data-bs-toggle="modal" data-bs-target="#myModal">+ INFO</button>
                 </div>
                 <div class="col-md-4 col-sm-12 rowCamaras__col" data-aos="flip-right" data-aos-duration="1000" data-aos-once="true">
                     <img alt="camara wifi 3" src="./Imagenes/camara-wifi-3.png" class="rowCamaras__img">
                     <p class="d-flex justify-content-center mt-3 rowCamaras__precioTexto"><b>Cámara WIFI DOMO con movimiento</b></p>
                     <p class="d-flex justify-content-center rowCamaras__precio">$19.500 ARS</p>
+                    <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#myModal">+ INFO</button>
                 </div>
             </div>
             <div class="row">
@@ -100,9 +125,9 @@
                 </div>
             </div>
             <div class="row rowMarcas">
-                <div class="col-md-4 col-sm-12 rowMarcas__img" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true"><img src="./Imagenes/logo-ezviz.png" alt="ezviz" class="rowMarcas__img--marca"></div>
-                <div class="col-md-4 col-sm-12 rowMarcas__img" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true"><img src="./Imagenes/logo-hikvision.png" alt="hikvision" class="rowMarcas__img--marca"></div>
-                <div class="col-md-4 col-sm-12 rowMarcas__img" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true"><img src="./Imagenes/logo-dahua.png" alt="dahua" class="rowMarcas__img--marca"></div>
+                <div class="col-md-4 col-sm-12 rowMarcas__img d-flex justify-content-center" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true"><img src="./Imagenes/logo-ezviz.png" alt="ezviz" class="rowMarcas__img--marca"></div>
+                <div class="col-md-4 col-sm-12 rowMarcas__img d-flex justify-content-center" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true"><img src="./Imagenes/logo-hikvision.png" alt="hikvision" class="rowMarcas__img--marca"></div>
+                <div class="col-md-4 col-sm-12 rowMarcas__img d-flex justify-content-center" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true"><img src="./Imagenes/logo-dahua.png" alt="dahua" class="rowMarcas__img--marca"></div>
             </div>
 <!-- colorVu -->
             <div class="row ms-3 me-3" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true">
