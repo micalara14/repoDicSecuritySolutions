@@ -54,7 +54,7 @@
             <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d90429;">
                 <div class="container-fluid">
                     <div class="contenedor__logo"><a href="./index.html"><img class="logo" src="Imagenes/Logo.jpeg"></a></div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler botonNavBoot" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -89,7 +89,7 @@
 <!-- camaras wifi -->
             <div class="row textoCamaras">
                 <div class="col">
-                    <div class="textoCamaras__titulo"><h1 class=h1Html>Cámaras</h1></div>s
+                    <div class="textoCamaras__titulo"><h1 class=h1Html>Cámaras</h1></div>
                     <p>Cámaras con conexión WIFI/LAN que permiten almacenar videos en memorias SD y ver en tiempo real desde la aplicación.<br><b>Los precios incluyen instalación. Aceptamos todos los medios de pago.</b></p>
                 </div>
             </div>
@@ -119,26 +119,29 @@
                 </div>
             </div>
 <!-- marcas trabajadas -->
-            <div class="row ms-3 me-3" data-aos="flip-up" data-aos-duration="1000">
+            <div class="row ms-3 me-3" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true">
                 <div class="col row__textoMarcas">
                     <h4>Marcas con las que trabajamos</h4>
                 </div>
             </div>
-            <div class="row rowMarcas">
-                <div class="col-md-4 col-sm-12 rowMarcas__img d-flex justify-content-center" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true"><img src="./Imagenes/logo-ezviz.png" alt="ezviz" class="rowMarcas__img--marca"></div>
-                <div class="col-md-4 col-sm-12 rowMarcas__img d-flex justify-content-center" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true"><img src="./Imagenes/logo-hikvision.png" alt="hikvision" class="rowMarcas__img--marca"></div>
-                <div class="col-md-4 col-sm-12 rowMarcas__img d-flex justify-content-center" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true"><img src="./Imagenes/logo-dahua.png" alt="dahua" class="rowMarcas__img--marca"></div>
-            </div>
+<!-- carrusel -->
+<div class="row rowMarcas">
+    <div class="col-4 colMarcas"><img class="colMarcas__img" src="./Imagenes/ezviz-2.png"></div>
+    <div class="col-4 colMarcas"><img class="colMarcas__img" src="./Imagenes/hikvision-2.png"></div>
+    <div class="col-4 colMarcas"><img class="colMarcas__img" src="./Imagenes/dahua-2.png"></div>
+</div>
 <!-- colorVu -->
             <div class="row ms-3 me-3" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true">
                 <div class="col row__textoMarcas">
                     <h4>Nuevas tecnologías</h4>
-                    <p>Trabajamos con las marcas Ezviz y Hikvision.<br>La línea ColorVu de Hikvision permite a las cámaras producir vídeos con vivos colores incluso en entornos con poca luz. Descubrí en el siguiente video cómo el color ayuda a contar verdaderas historias:</p>
                 </div>
             </div>
             <div class="row ms-3 me-3 d-flex align-items-center rowTecnologia" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true">
-                <div class="col-md-6 col-sm-12"><img alt="foto colorvu" src="Imagenes/ColorVu1.jpg" class="rowTecnologia__media"></div>
-                <div class="col-md-6 col-sm-12"><iframe class="rowTecnologia__media" width="560" height="315" src="https://www.youtube.com/embed/mvcmWCnp-PA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="col-md-5 col-sm-12 rowTecnologia__texto">
+                    <h4>Colores vivos en cualquier entorno</h4>
+                    <p>La línea ColorVu de Hikvision permite a las cámaras producir vídeos con vivos colores incluso en entornos con poca luz. Descubrí en el siguiente video cómo el color ayuda a contar verdaderas historias</p>
+                </div>
+                <div class="col-md-7 col-sm-12 rowTecnologia__video"><iframe class="rowTecnologia__video--vid" width="560" height="315" src="https://www.youtube.com/embed/mvcmWCnp-PA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </main>
@@ -147,7 +150,7 @@
     <div class="col chauPadding">
 <footer class="footer">
     <div class="contenedor__logoFooter">
-        <img class="logo" alt="logo dic security solutions" src="Imagenes/Logo.jpeg">
+        <a href="./index.html"><img class="logo" alt="logo dic security solutions" src="Imagenes/Logo.jpeg"></a>
     </div>
     <div class="footer__redes">
         <h3>Seguinos en redes</h3><br>

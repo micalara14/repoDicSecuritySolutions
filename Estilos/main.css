@@ -22,10 +22,9 @@ a {
 
 body {
   background-color: #edf2f4;
-  overflow-x: hidden;
 }
 
-.navbar-toggler {
+.botonNavBoot {
   margin-right: 3rem;
 }
 
@@ -100,7 +99,7 @@ header {
   overflow: hidden;
   margin-left: 2rem;
   margin-right: 3rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
 
@@ -515,7 +514,15 @@ form .formulario {
 
 /*foto+texto*/
 .divNosotros {
-  border-bottom: solid 0.5rem #2b2d42;
+  border-bottom: solid 0.3rem #2b2d42;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+@media (max-width: 480px) {
+  .divNosotros {
+    margin: 1rem;
+  }
 }
 
 .divNosotros__img {
@@ -572,6 +579,7 @@ form .formulario {
   font-weight: normal;
   font-size: 2.2rem;
   margin: 2rem;
+  padding: 0rem 5rem 5rem 5rem;
 }
 
 @media (max-width: 480px) {
@@ -579,6 +587,7 @@ form .formulario {
     font-size: 2rem;
     text-align: center;
     margin: 2rem 0 0 0;
+    padding: 0rem;
   }
 }
 
@@ -894,7 +903,7 @@ form .formulario {
   background-image: url(../../Imagenes/fondo-prueba.jpg);
   background-position: center;
   background-size: cover;
-  padding: 6.5rem;
+  padding: 7rem;
   margin-bottom: 3rem;
 }
 
@@ -931,11 +940,17 @@ form .formulario {
 }
 
 .rowCamaras__img, .rowAlarmas__img {
-  width: 70%;
+  width: 80%;
   -webkit-box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.3);
   border-radius: 15%;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 480px) {
+  .rowCamaras__img, .rowAlarmas__img {
+    width: 100%;
+  }
 }
 
 .rowCamaras__precioTexto, .rowAlarmas__precioTexto {
@@ -1011,40 +1026,95 @@ form .formulario {
 }
 
 .rowMarcas {
+  padding-bottom: 4rem;
+  border-bottom: solid 0.3rem #2b2d42;
+  margin: 0 2rem 0 2rem;
+}
+
+.rowMarcas .colMarcas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1rem 2rem 8rem 2rem;
+  margin-bottom: 2rem;
 }
 
-.rowMarcas__img {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.rowMarcas .colMarcas__img {
+  width: 30%;
+  padding: 1rem;
 }
 
-.rowMarcas__img--marca {
-  width: 50%;
-  height: 20rem;
-  border-radius: 20%;
-  -webkit-box-shadow: 2px 3px 10px 5px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 3px 10px 5px rgba(0, 0, 0, 0.3);
-  margin: 1rem;
+@media (max-width: 480px) {
+  .rowMarcas .colMarcas__img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .rowMarcas .colMarcas__img {
+    width: 100%;
+  }
 }
 
 /*tecnología*/
-.rowTecnologia__media {
+.rowTecnologia__texto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding: 4rem;
+  text-align: center;
+}
+
+.rowTecnologia__texto h4 {
+  font-size: 2.5rem;
+  font-family: "Quicksand", sans-serif;
+  color: #2b2d42;
+  font-weight: bold;
+}
+
+.rowTecnologia__texto p {
+  font-size: 2.5rem;
+  font-family: "Quicksand", sans-serif;
+  color: #2b2d42;
+}
+
+.rowTecnologia__video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rowTecnologia__video .rowTecnologia__video--vid {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
-  width: 100%;
-  margin: 1rem;
+  width: 80%;
+  margin: 3rem;
   border-radius: 5%;
   -webkit-box-shadow: 2px 3px 10px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 2px 3px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 480px) {
+  .rowTecnologia__video .rowTecnologia__video--vid {
+    width: 100%;
+  }
 }
 
 /*animacion precios*/

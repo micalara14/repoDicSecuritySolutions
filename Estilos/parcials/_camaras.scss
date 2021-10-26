@@ -2,7 +2,7 @@
 	background-image: url(../../Imagenes/fondo-prueba.jpg);
 	background-position: center;
 	background-size: cover;
-	padding: 6.5rem;
+	padding: 7rem;
 	margin-bottom: 3rem;
 	&__titulo {
 		@extend .titulos__paginas;
@@ -29,10 +29,13 @@
 .rowCamaras {
 	margin: 2rem;
 	&__img {
-		width: 70%;
+		width: 80%;
 		box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.3);
 		border-radius: 15%;
 		margin-bottom: 2rem;
+		@include telefono {
+			width: 100%;
+		}
 	}
 	&__precioTexto {
 		font-size: $tamFuente;
@@ -91,31 +94,61 @@
 		text-shadow: 0.1rem 0.1rem $gris;
 	}
 }
-
 .rowMarcas {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	margin: 1rem 2rem 8rem 2rem;
-	&__img {
+	padding-bottom: 4rem;
+	border-bottom: solid 0.3rem $azul;
+	margin: 0 2rem 0 2rem;
+	.colMarcas {
+		display: flex;
 		box-sizing: border-box;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 2rem;
+		&__img {
+			width: 30%;
+			padding: 1rem;
+			@include telefono {
+				width: 100%;
+			}
+			@include tablet {
+				width: 100%;
+			}
+		}
 	}
-}
-.rowMarcas__img--marca {
-	width: 50%;
-	height: 20rem;
-	border-radius: 20%;
-	box-shadow: 2px 3px 10px 5px rgba(0, 0, 0, 0.3);
-	margin: 1rem;
 }
 /*tecnología*/
 .rowTecnologia {
-	&__media {
-		box-sizing: content-box;
-		width: 100%;
-		margin: 1rem;
-		border-radius: 5%;
-		box-shadow: 2px 3px 10px 5px rgba(0, 0, 0, 0.3);
+	&__texto {
+		display: flex;
+		flex-flow: column;
+		padding: 4rem;
+		text-align: center;
+		h4 {
+			font-size: $tamFuente+1;
+			font-family: $fuenteM;
+			color: $azul;
+			font-weight: bold;
+		}
+		p {
+			font-size: $tamFuente+1;
+			font-family: $fuenteM;
+			color: $azul;
+		}
+	}
+	&__video {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.rowTecnologia__video--vid {
+			box-sizing: content-box;
+			width: 80%;
+			margin: 3rem;
+			border-radius: 5%;
+			box-shadow: 2px 3px 10px 5px rgba(0, 0, 0, 0.3);
+			@include telefono {
+				width: 100%;
+			}
+		}
 	}
 }
 
