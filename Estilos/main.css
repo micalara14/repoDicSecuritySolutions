@@ -123,75 +123,43 @@ header {
   }
 }
 
+.navbar-nav {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin-right: 3rem;
+}
+
 /*estetica inicio*/
-.nav__menu--inicio {
-  -webkit-transition: letter-spacing 0.3s;
-  transition: letter-spacing 0.3s;
+li a {
+  position: relative;
 }
 
-.nav__menu--inicio:hover {
-  letter-spacing: 0.5rem;
+a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #edf2f4;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
-.nav__menu--inicio a:hover {
-  color: #2b2d42;
-}
-
-/*estetica nosotros*/
-.nav__menu--nosotros {
-  -webkit-transition: letter-spacing 0.3s;
-  transition: letter-spacing 0.3s;
-}
-
-.nav__menu--nosotros:hover {
-  letter-spacing: 0.5rem;
-}
-
-.nav__menu--nosotros a:hover {
-  color: #2b2d42;
-}
-
-/*estetica servicio tecnico*/
-.nav__menu--servicioTecnico {
-  -webkit-transition: letter-spacing 0.3s;
-  transition: letter-spacing 0.3s;
-}
-
-.nav__menu--servicioTecnico:hover {
-  letter-spacing: 0.5rem;
-}
-
-.nav__menu--servicioTecnico a:hover {
-  color: #2b2d42;
-}
-
-/*estetica instalaciones*/
-.nav__menu--instalaciones {
-  -webkit-transition: letter-spacing 0.3s;
-  transition: letter-spacing 0.3s;
-}
-
-.nav__menu--instalaciones:hover {
-  letter-spacing: 0.5rem;
-}
-
-.nav__menu--instalaciones a:hover {
-  color: #2b2d42;
+a:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 /*estetica alarmas*/
-.nav__menu--alarmas {
-  letter-spacing: 0.4rem;
-  -webkit-transition: letter-spacing 0.3s;
-  transition: letter-spacing 0.3s;
-}
-
 .nav__menu--alarmas a {
   color: #edf2f4;
-}
-
-.nav__menu--alarmas:hover {
-  letter-spacing: 0.5rem;
 }
 
 .nav__menu--alarmas a:hover {
@@ -199,18 +167,8 @@ header {
 }
 
 /*estetica camaras*/
-.nav__menu--camaras {
-  letter-spacing: 0.4rem;
-  -webkit-transition: letter-spacing 0.3s;
-  transition: letter-spacing 0.3s;
-}
-
 .nav__menu--camaras a {
   color: #edf2f4;
-}
-
-.nav__menu--camaras:hover {
-  letter-spacing: 0.5rem;
 }
 
 .nav__menu--camaras a:hover {
