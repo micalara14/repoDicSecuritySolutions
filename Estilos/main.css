@@ -812,7 +812,7 @@ form .formulario {
 }
 
 .textoAlarmas {
-  background-image: url(../../Imagenes/fondo-alarmas.jpg);
+  background-image: url(../Imagenes/fondo-alarmas.jpg);
   background-position: center;
   background-size: cover;
   padding: 10rem;
