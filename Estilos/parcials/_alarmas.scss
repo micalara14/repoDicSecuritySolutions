@@ -1,3 +1,4 @@
+/*introducción*/
 .textoAlarmas {
 	background-image: url(../Imagenes/fondo-alarmas.jpg);
 	background-position: center;
@@ -26,21 +27,31 @@
 	}
 }
 
+/*imágenes y precios*/
+
 .rowAlarmas {
 	@extend .rowCamaras;
-	&__col {
-		@extend .rowCamaras__col;
-	}
-	&__img {
-		@extend .rowCamaras__img;
-	}
 	&__precioTexto {
 		@extend .rowCamaras__precioTexto;
 	}
 	&__precio {
 		@extend .rowCamaras__precio;
 	}
+	&__col {
+		@extend .rowCamaras__col;
+	}
 }
+.alarmaEstilo {
+	@extend .camaraEstilo;
+}
+.alarmaEstilo--info {
+	@extend .camaraEstilo--info;
+}
+.alarmaEstilo--info:hover {
+	opacity: 0.9;
+}
+
+/*cierre*/
 .parrafoCierreAlarmas {
 	font-size: $tamFuente+0.5;
 	font-family: $fuenteM;
