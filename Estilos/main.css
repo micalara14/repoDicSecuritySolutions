@@ -4,8 +4,8 @@
 /*padding*/
 /*reseteo*/
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-decoration: none;
@@ -663,84 +663,28 @@ form .formulario {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: grid__img1;
-  -webkit-transition: scale;
-  transition: scale;
   position: relative;
-}
-
-.grid__img1:hover {
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
-}
-
-@media (max-width: 480px) {
-  .grid__img1:hover {
-    -webkit-transform: none;
-            transform: none;
-  }
 }
 
 .grid__img2 {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: grid__img2;
-  -webkit-transition: scale;
-  transition: scale;
   position: relative;
-}
-
-.grid__img2:hover {
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
-}
-
-@media (max-width: 480px) {
-  .grid__img2:hover {
-    -webkit-transform: none;
-            transform: none;
-  }
 }
 
 .grid__img3 {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: grid__img3;
-  -webkit-transition: scale;
-  transition: scale;
   position: relative;
-}
-
-.grid__img3:hover {
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
-}
-
-@media (max-width: 480px) {
-  .grid__img3:hover {
-    -webkit-transform: none;
-            transform: none;
-  }
 }
 
 .grid__img4 {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: grid__img4;
-  -webkit-transition: scale;
-  transition: scale;
   position: relative;
-}
-
-.grid__img4:hover {
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
-}
-
-@media (max-width: 480px) {
-  .grid__img4:hover {
-    -webkit-transform: none;
-            transform: none;
-  }
 }
 
 .grid__img5 {
@@ -748,42 +692,14 @@ form .formulario {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: grid__img5;
-  -webkit-transition: scale;
-  transition: scale;
   position: relative;
-}
-
-.grid__img5:hover {
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
-}
-
-@media (max-width: 480px) {
-  .grid__img5:hover {
-    -webkit-transform: none;
-            transform: none;
-  }
 }
 
 .grid__img6 {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: grid__img6;
-  -webkit-transition: scale;
-  transition: scale;
   position: relative;
-}
-
-.grid__img6:hover {
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
-}
-
-@media (max-width: 480px) {
-  .grid__img6:hover {
-    -webkit-transform: none;
-            transform: none;
-  }
 }
 
 .grid__img7 {
@@ -791,21 +707,7 @@ form .formulario {
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: grid__img7;
-  -webkit-transition: scale;
-  transition: scale;
   position: relative;
-}
-
-.grid__img7:hover {
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
-}
-
-@media (max-width: 480px) {
-  .grid__img7:hover {
-    -webkit-transform: none;
-            transform: none;
-  }
 }
 
 /*estilo imagenes*/
@@ -830,6 +732,7 @@ form .formulario {
   width: 100%;
   height: 100%;
   padding: 2rem;
+  border-radius: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -847,6 +750,8 @@ form .formulario {
   background-color: #2b2d42;
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
+  -webkit-transition: 0.8s cubic-bezier(0.1, 0.7, 1, 0.1);
+  transition: 0.8s cubic-bezier(0.1, 0.7, 1, 0.1);
   opacity: 0;
 }
 
@@ -859,7 +764,6 @@ form .formulario {
 
 .grid__img--info:hover {
   opacity: 0.9;
-  border-radius: 5%;
 }
 
 /*introducción*/
