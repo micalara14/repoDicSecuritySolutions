@@ -59,6 +59,12 @@ a:hover::before {
 	transform: scaleX(1);
 }
 
+.contenedor__logo {
+	a::before {
+		width: 0%;
+	}
+}
+
 /*estetica alarmas*/
 .nav__menu--alarmas {
 	a {

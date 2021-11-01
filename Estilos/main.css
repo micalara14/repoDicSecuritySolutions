@@ -157,6 +157,10 @@ a:hover::before {
           transform: scaleX(1);
 }
 
+.contenedor__logo a::before, .contenedor__logoFooter a::before {
+  width: 0%;
+}
+
 /*estetica alarmas*/
 .nav__menu--alarmas a {
   color: #edf2f4;
@@ -661,6 +665,7 @@ form .formulario {
   grid-area: grid__img1;
   -webkit-transition: scale;
   transition: scale;
+  position: relative;
 }
 
 .grid__img1:hover {
@@ -681,6 +686,7 @@ form .formulario {
   grid-area: grid__img2;
   -webkit-transition: scale;
   transition: scale;
+  position: relative;
 }
 
 .grid__img2:hover {
@@ -701,6 +707,7 @@ form .formulario {
   grid-area: grid__img3;
   -webkit-transition: scale;
   transition: scale;
+  position: relative;
 }
 
 .grid__img3:hover {
@@ -721,6 +728,7 @@ form .formulario {
   grid-area: grid__img4;
   -webkit-transition: scale;
   transition: scale;
+  position: relative;
 }
 
 .grid__img4:hover {
@@ -742,6 +750,7 @@ form .formulario {
   grid-area: grid__img5;
   -webkit-transition: scale;
   transition: scale;
+  position: relative;
 }
 
 .grid__img5:hover {
@@ -762,6 +771,7 @@ form .formulario {
   grid-area: grid__img6;
   -webkit-transition: scale;
   transition: scale;
+  position: relative;
 }
 
 .grid__img6:hover {
@@ -783,6 +793,7 @@ form .formulario {
   grid-area: grid__img7;
   -webkit-transition: scale;
   transition: scale;
+  position: relative;
 }
 
 .grid__img7:hover {
@@ -798,7 +809,7 @@ form .formulario {
 }
 
 /*estilo imagenes*/
-.grid__imagenEstilos {
+.grid img {
   width: 100%;
   height: 100%;
   padding: 0.3rem;
@@ -806,9 +817,49 @@ form .formulario {
 }
 
 @media (max-width: 480px) {
-  .grid__imagenEstilos {
+  .grid img {
     height: auto;
   }
+}
+
+/*info imagenes hover*/
+.grid__img--info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #edf2f4;
+  background-color: #2b2d42;
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  opacity: 0;
+}
+
+.grid__img--info p {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem;
+}
+
+.grid__img--info:hover {
+  opacity: 0.9;
+  border-radius: 5%;
 }
 
 /*introducción*/
@@ -1003,6 +1054,7 @@ form .formulario {
 .camaraEstilo--info ul, .alarmaEstilo--info ul {
   text-align: center;
   list-style: none;
+  padding: 0;
 }
 
 .camaraEstilo--info:hover, .alarmaEstilo--info:hover {
