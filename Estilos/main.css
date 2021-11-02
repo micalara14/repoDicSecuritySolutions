@@ -750,8 +750,8 @@ form .formulario {
   background-color: #2b2d42;
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
-  -webkit-transition: 0.8s cubic-bezier(0.1, 0.7, 1, 0.1);
-  transition: 0.8s cubic-bezier(0.1, 0.7, 1, 0.1);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
   opacity: 0;
 }
 
@@ -945,6 +945,8 @@ form .formulario {
   background-color: #2b2d42;
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
   opacity: 0;
 }
 

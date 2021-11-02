@@ -22,121 +22,103 @@
 </head>
 <!-- body -->
 <body class="body">
-    <div class="container-fluid">
 <!-- header -->
-        <header>
-            <div class="row">
-                <div class="col chauPadding">
-                    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d90429;">
-                        <div class="container-fluid">
-                            <div class="contenedor__logo"><a href="./index.html"><img class="logo" src="Imagenes/Logo.jpeg"></a></div>
-                            <button class="navbar-toggler botonNavBoot" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav nav__menu">
-                                <li class="nav-item p-4 nav__menu--inicio">
-                                <a class="nav-link" style="color:#edf2f4" aria-current="page" href="./index.html">Inicio</a>
-                                </li>
-                                <li class="nav-item p-4 nav__menu--nosotros">
-                                <a class="nav-link" style="color:#edf2f4" href="#">Nosotros</a>
-                                </li>
-                                <li class="nav-item p-4 nav__menu--servicioTecnico">
-                                <a class="nav-link" style="color:#edf2f4" href="./servicio-tecnico.html">Servicio Técnico</a>
-                                </li>
-                                <li class="nav-item dropdown p-4 nav__menu--instalaciones">
-                                <a class="nav-link dropdown-toggle" style="color:#edf2f4" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Instalaciones
-                                </a>
-                                <ul class="dropdown-menu nav__menu" style="background-color:#2b2d42" aria-labelledby="navbarDropdownMenuLink">
-                                    <li class="nav__menu--camaras"><a class="dropdown-item" href="./camaras.html">Cámaras</a></li>
-                                    <li class="nav__menu--alarmas"><a class="dropdown-item" href="./alarmas.html">Alarmas</a></li>
-                                </ul>
-                                </li>
-                            </ul>
-                            </div>
-                        </div>
-                        </nav>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d90429;">
+            <div class="container-fluid">
+                <div class="contenedor__logo"><a href="./index.html"><img class="logo" src="Imagenes/Logo.jpeg"></a></div>
+                <button class="navbar-toggler botonNavBoot" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav nav__menu">
+                    <li class="nav-item p-4 nav__menu--inicio">
+                    <a class="nav-link" style="color:#edf2f4" aria-current="page" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item p-4 nav__menu--nosotros">
+                    <a class="nav-link" style="color:#edf2f4" href="#">Nosotros</a>
+                    </li>
+                    <li class="nav-item p-4 nav__menu--servicioTecnico">
+                    <a class="nav-link" style="color:#edf2f4" href="./servicio-tecnico.html">Servicio Técnico</a>
+                    </li>
+                    <li class="nav-item dropdown p-4 nav__menu--instalaciones">
+                    <a class="nav-link dropdown-toggle" style="color:#edf2f4" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Instalaciones</a>
+                        <ul class="dropdown-menu nav__menu" style="background-color:#2b2d42" aria-labelledby="navbarDropdownMenuLink">
+                        <li class="nav__menu--camaras"><a class="dropdown-item" href="./camaras.html">Cámaras</a></li>
+                        <li class="nav__menu--alarmas"><a class="dropdown-item" href="./alarmas.html">Alarmas</a></li>
+                    </ul>
+                    </li>
+                </ul>
                 </div>
             </div>
-        </header>
+        </nav>
+    </header>
 <!-- main -->
-<main>
+    <main>
+    <div class="container-fluid">
 <!-- titulo -->
-    <div clas="row">
-        <div class="col">
         <div class="titulos__paginas"><h1 class=h1Html>Nosotros</h1></div>
-        </div>
-    </div>
 <!-- texto+foto -->
-    <div class="row divNosotros">
-        <div class="col-md-7 col-sm-12 divNosotros__img">
-            <img src="Imagenes/img-nosotros.jpg" alt="nosostros" class="main__imgNosotros">
+        <div class="row divNosotros">
+            <div class="col-md-7 col-sm-12 divNosotros__img">
+                <img src="Imagenes/img-nosotros.jpg" alt="nosostros" class="main__imgNosotros">
+            </div>
+            <div class="col-md-5 col-sm-12 main__texto__nosotros">
+                <p class="main__textoNosotros">Somos una empresa dedicada a la seguridad electrónica.<br>
+                Contamos con años de experiencia en el rubro y personal altamente capacitado y disponible para ayudarlo.<br>
+                Brindamos soluciones eficaces personalizadas porque sabemos que cada situación es difetente.<br>
+                Todas nuestras instalaciones son bajo normativas.</p>
+            </div>
         </div>
-        <div class="col-md-5 col-sm-12 main__texto__nosotros">
-            <p class="main__textoNosotros">Somos una empresa dedicada a la seguridad electrónica.<br>
-            Contamos con años de experiencia en el rubro y personal altamente capacitado y disponible para ayudarlo.<br>
-            Brindamos soluciones eficaces personalizadas porque sabemos que cada situación es difetente.<br>
-            Todas nuestras instalaciones son bajo normativas.</p>
-        </div>
-    </div>
 <!-- mapa -->
-    <div class="row ">
-        <div class="col-md-6 col-sm-12 row__parrafoUbicacion" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-once="true">
-            <p>Estamos ubicados en Malvinas Argentinas, Buenos Aires:</p>
-            <div class="d-flex justify-content-center diiv">
-            <iframe class="main__mapa--mod" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105237.47400304432!2d-58.78560660202494!3d-34.48586791965801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbcb3a3e025cf%3A0xdb48b4e04de49110!2sMalvinas%20Argentinas%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1633299228356!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="row">
+            <div class="col-md-6 col-sm-12 row__parrafoUbicacion" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-once="true">
+                <p>Estamos ubicados en Malvinas Argentinas, Buenos Aires:</p>
+                <div class="d-flex justify-content-center diiv">
+                <iframe class="main__mapa--mod" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105237.47400304432!2d-58.78560660202494!3d-34.48586791965801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbcb3a3e025cf%3A0xdb48b4e04de49110!2sMalvinas%20Argentinas%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1633299228356!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-12 row__parrafoUbicacion" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-once="true">
+                <p class="d-flex mt-4 justify-content-center">Datos de contacto:</p>
+                <div class="d-flex justify-content-center flex-column row__parrafoUbicacionContacto">
+                <div><p><i class="fas fa-phone"></i><br>+54 9 11 6486-4919</p></div>
+                <div><p><i class="fas fa-map-marker-alt"></i><br>Malvinas Argentinas, Buenos Aires</p></div>
+                <div><p><a class="whatsapp" href="https://api.whatsapp.com/send?phone=541164864919&text=Hola%2C+necesito+asesoramiento+sobre+sus+productos."><i class="fab fa-whatsapp"></i></a><br>+54 9 11 6486-4919</p></div>
+                <div><p><a href="https://www.facebook.com/DicSeguridad"><i class="fab fa-facebook"></i></a><br>Dic Security Solutions</p></div>
+                <div><p><a href="https://www.instagram.com/dicsecuritysolutions/"><i class="fab fa-instagram"></i></a><br>@DicSecurity Solutions</p></div>
+                </div>
             </div>
         </div>
-        <div class="col-md-5 col-sm-12 row__parrafoUbicacion" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-once="true">
-            <p class="d-flex mt-4 justify-content-center">Datos de contacto:</p>
-            <div class="d-flex justify-content-center flex-column row__parrafoUbicacionContacto">
-            <div><p><i class="fas fa-phone"></i><br>+54 9 11 6486-4919</p></div>
-            <div><p><i class="fas fa-map-marker-alt"></i><br>Malvinas Argentinas, Buenos Aires</p></div>
-            <div><p><a class="whatsapp" href="https://api.whatsapp.com/send?phone=541164864919&text=Hola%2C+necesito+asesoramiento+sobre+sus+productos."><i class="fab fa-whatsapp"></i></a><br>+54 9 11 6486-4919</p></div>
-            <div><p><a href="https://www.facebook.com/DicSeguridad"><i class="fab fa-facebook"></i></a><br>Dic Security Solutions</p></div>
-            <div><p><a href="https://www.instagram.com/dicsecuritysolutions/"><i class="fab fa-instagram"></i></a><br>@DicSecurity Solutions</p></div>
-            </div>
-        </div>
-    </div>
 <!-- trabaja con nosotros -->
-    <div class="row">
-        <div class="col trabajaConNosotros">
+        <div class="trabajaConNosotros">
                 <h2 class="trabajaConNosotros__estilos">Trabaja con nosotros</h2>
                 <p>Si queres formar parte de nuestro equipo mandanos tu Curriculum Vitae por mail con el asunto "Quiero Formar Parte" a nuestra casilla de correo contacto@dicsecuritysolutions.com</p>
         </div>
     </div>
-</main>
+    </main>
 <!-- footer -->
-<div class="row">
-    <div class="col chauPadding">
-<footer class="footer">
-    <div class="contenedor__logoFooter">
-        <a href="./index.html"><img class="logo" alt="logo dic security solutions" src="Imagenes/Logo.jpeg"></a>
-    </div>
-    <div class="footer__redes">
-        <h3>Seguinos en redes</h3><br>
-        <a href="https://www.instagram.com/dicsecuritysolutions/"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/DicSeguridad"><i class="fab fa-facebook"></i></a>
-    </div>
-    <div class="footer__redes">
-        <h3>Datos de contacto:</h3><br>
-        <p>Teléfono:<br>+54 9 11 6486-4919 <br>Mail:<br>dic.sscontacto@gmail.com<br></p>
-    </div>
-    <div class="footer__redes footer__redes--whatsapp">
-        <a class="whatsapp" href="https://api.whatsapp.com/send?phone=541164864919&text=Hola%2C+necesito+asesoramiento+sobre+sus+productos."><i class="fab fa-whatsapp"></i></a>
-    </div>
-</footer>
-    </div>
-    </div>
+    <footer class="footer">
+        <div class="contenedor__logoFooter">
+            <a href="./index.html"><img class="logo" alt="logo dic security solutions" src="Imagenes/Logo.jpeg"></a>
+        </div>
+        <div class="footer__redes">
+            <h3>Seguinos en redes</h3><br>
+            <a href="https://www.instagram.com/dicsecuritysolutions/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/DicSeguridad"><i class="fab fa-facebook"></i></a>
+        </div>
+        <div class="footer__redes">
+            <h3>Datos de contacto:</h3><br>
+            <p>Teléfono:<br>+54 9 11 6486-4919 <br>Mail:<br>dic.sscontacto@gmail.com<br></p>
+        </div>
+        <div class="footer__redes footer__redes--whatsapp">
+            <a class="whatsapp" href="https://api.whatsapp.com/send?phone=541164864919&text=Hola%2C+necesito+asesoramiento+sobre+sus+productos."><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
 <!-- derechos -->
-<div class="row">
-    <div class="col derechos">
+    <div class="derechos">
         <p>© Dic Secutiry Solutions | 2021 | Todos los derechos reservados.</p>
     </div>
-</div>
 
-    </div>
 <!--scripts aos-->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>AOS.init();</script>

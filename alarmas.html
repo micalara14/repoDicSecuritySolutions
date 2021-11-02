@@ -17,168 +17,152 @@
     <link rel="stylesheet" href="Estilos/main.css">
 </head>
 <!-- body -->
-<!-- modals -->
-<div class="modal" id="myModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">DEJANOS TUS DATOS Y TE CONTACTAREMOS</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-                <form class="d-flex flex-column formularioModal">
-                    <div>
-                        <label for="nombre" class="form-label m-3">Nombre</label>
-                        <input type="text" id="nombre" class="form-control">
-                    </div>
-                    <div>
-                        <label for="mailTelefono" class="form-label m-3">Email o teléfono</label>
-                        <input type="text" id="mailTelefono" class="form-control">
-                    </div>
-                    <div>
-                        <label for="consulta" class="form-label m-3">Consulta</label>
-                        <textarea class="form-control" id="consulta"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-danger m-3">Enviar</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 <body>
-<div class="container-fluid">
-<!-- header -->
-<header>
-    <div class="row">
-        <div class="col chauPadding">
-            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d90429;">
-                    <div class="contenedor__logo"><a href="./index.html"><img class="logo" src="Imagenes/Logo.jpeg"></a></div>
-                    <button class="navbar-toggler botonNavBoot" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav nav__menu">
-                        <li class="nav-item p-4 nav__menu--inicio">
-                        <a class="nav-link" style="color:#edf2f4" aria-current="page" href="./index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item p-4 nav__menu--nosotros">
-                        <a class="nav-link" style="color:#edf2f4" href="./nosotros.html">Nosotros</a>
-                        </li>
-                        <li class="nav-item p-4 nav__menu--servicioTecnico">
-                        <a class="nav-link" style="color:#edf2f4" href="./servicio-tecnico.html">Servicio Técnico</a>
-                        </li>
-                        <li class="nav-item dropdown p-4 nav__menu--instalaciones">
-                        <a class="nav-link dropdown-toggle" style="color:#edf2f4" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Instalaciones
-                        </a>
-                        <ul class="dropdown-menu nav__menu" style="background-color:#2b2d42" aria-labelledby="navbarDropdownMenuLink">
-                            <li class="nav__menu--camaras"><a class="dropdown-item" href="./camaras.html">Cámaras</a></li>
-                            <li class="nav__menu--alarmas"><a class="dropdown-item" href="./alarmas.html">Alarmas</a></li>
-                        </ul>
-                        </li>
-                    </ul>
-                    </div>
-                </nav>
+<!-- modals -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">DEJANOS TUS DATOS Y TE CONTACTAREMOS</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="d-flex flex-column formularioModal">
+                        <div>
+                            <label for="nombre" class="form-label m-3">Nombre</label>
+                            <input type="text" id="nombre" class="form-control">
+                        </div>
+                        <div>
+                            <label for="mailTelefono" class="form-label m-3">Email o teléfono</label>
+                            <input type="text" id="mailTelefono" class="form-control">
+                        </div>
+                        <div>
+                            <label for="consulta" class="form-label m-3">Consulta</label>
+                            <textarea class="form-control" id="consulta"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-danger m-3">Enviar</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
+<!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d90429;">
+            <div class="contenedor__logo"><a href="./index.html"><img class="logo" src="Imagenes/Logo.jpeg"></a></div>
+            <button class="navbar-toggler botonNavBoot" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav nav__menu">
+                <li class="nav-item p-4 nav__menu--inicio">
+                <a class="nav-link" style="color:#edf2f4" aria-current="page" href="./index.html">Inicio</a>
+                </li>
+                <li class="nav-item p-4 nav__menu--nosotros">
+                <a class="nav-link" style="color:#edf2f4" href="./nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item p-4 nav__menu--servicioTecnico">
+                <a class="nav-link" style="color:#edf2f4" href="./servicio-tecnico.html">Servicio Técnico</a>
+                </li>
+                <li class="nav-item dropdown p-4 nav__menu--instalaciones">
+                <a class="nav-link dropdown-toggle" style="color:#edf2f4" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Instalaciones</a>
+                <ul class="dropdown-menu nav__menu" style="background-color:#2b2d42" aria-labelledby="navbarDropdownMenuLink">
+                    <li class="nav__menu--camaras"><a class="dropdown-item" href="./camaras.html">Cámaras</a></li>
+                    <li class="nav__menu--alarmas"><a class="dropdown-item" href="./alarmas.html">Alarmas</a></li>
+                </ul>
+                </li>
+            </ul>
+            </div>
+        </nav>
 </header>
 <!-- main -->
-<main>
+    <main>
+    <div class="container-fluid">
 <!-- contenido texto -->
-<div class="row textoAlarmas">
-    <div class="col">
-        <div class="textoAlarmas__titulos"><h1 class=h1Html>Alarmas</h1></div>
-        <p>Conocé nuestros kits más solicitados.<br><b>Los precios incluyen instalación. Aceptamos todos los medios de pago.</b></p>
-    </div>
-</div>
+        <div class="textoAlarmas">
+            <div class="textoAlarmas__titulos"><h1 class=h1Html>Alarmas</h1></div>
+            <p>Conocé nuestros kits más solicitados.<br><b>Los precios incluyen instalación. Aceptamos todos los medios de pago.</b></p>
+        </div>
 <!-- precio alarmas -->
-<div class="row rowAlarmas">
-    <div class="col-md-4 col-sm-12 rowAlarmas__col" data-aos="flip-left" data-aos-duration="1000" data-aos-once="true">
-        <div class="alarmaEstilo">
-            <img src="./Imagenes/alarma-inalambrica.png" alt="alarma inalámbrica">
-            <div class="alarmaEstilo--info">
-                <p>Alarmas inalámbricas</p>
-                <ul>
-                    <li>Duración de batería de 4 a 6 años</li>
-                    <li>No llevan cables, muy estéticas</li>
-                    <li>Conectividad con aplicaciones</li>
-                </ul>
+        <div class="row rowAlarmas">
+            <div class="col-md-4 col-sm-12 rowAlarmas__col" data-aos="flip-left" data-aos-duration="1000" data-aos-once="true">
+                <div class="alarmaEstilo">
+                    <img src="./Imagenes/alarma-inalambrica.png" alt="alarma inalámbrica">
+                    <div class="alarmaEstilo--info">
+                        <p>Alarmas inalámbricas</p>
+                        <ul>
+                            <li>Duración de batería de 4 a 6 años</li>
+                            <li>No llevan cables, muy estéticas</li>
+                            <li>Conectividad con aplicaciones</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="d-flex justify-content-center mt-3 rowAlarmas__precioTexto"><b>ALARMAS INALÁMBRICAS</b></p>
+                <p class="d-flex justify-content-center rowAlarmas__precio">$45.000 ARS</p>
+                <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#myModal">+ INFO</button>
+            </div>
+            <div class="col-md-4 col-sm-12 rowAlarmas__col" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true">
+                <div class="alarmaEstilo">
+                    <img src="./Imagenes/alarma-cableada.png" alt="alarma cableada">
+                    <div class="alarmaEstilo--info">
+                        <p>Alarma alámbrica</p>
+                        <ul>
+                            <li>Mayor alcance</li>
+                            <li>Mayor compatibilidad con dispositivos</li>
+                            <li>Conectividad con aplicaciones</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="d-flex justify-content-center mt-3 rowAlarmas__precioTexto"><b>ALARMAS ALÁMBRICAS</b></p>
+                <p class="d-flex justify-content-center rowAlarmas__precio">$30.000 ARS</p>
+                <button type="button" class="btn btn-danger btn-lg botonModal" data-bs-toggle="modal" data-bs-target="#myModal">+ INFO</button>
+            </div>
+            <div class="col-md-4 col-sm-12 rowAlarmas__col" data-aos="flip-right" data-aos-duration="1000" data-aos-once="true">
+                <div class="alarmaEstilo">
+                    <img src="./Imagenes/boton-panico.png" alt="botón de pánico">
+                    <div class="alarmaEstilo--info">
+                        <p>Botón de pánico</p>
+                        <ul>
+                            <li>Sirenas interiores y exteriores</li>
+                            <li>Fácil de usar</li>
+                            <li>Sirenas interiores y exteriores</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="d-flex justify-content-center mt-3 rowAlarmas__precioTexto"><b>BOTON DE PÁNICO</b></p>
+                <p class="d-flex justify-content-center rowAlarmas__precio">$6.500 ARS</p>
+                <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#myModal">+ INFO</button>
             </div>
         </div>
-        <p class="d-flex justify-content-center mt-3 rowAlarmas__precioTexto"><b>ALARMAS INALÁMBRICAS</b></p>
-        <p class="d-flex justify-content-center rowAlarmas__precio">$45.000 ARS</p>
-        <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#myModal">+ INFO</button>
-    </div>
-    <div class="col-md-4 col-sm-12 rowAlarmas__col" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true">
-        <div class="alarmaEstilo">
-            <img src="./Imagenes/alarma-cableada.png" alt="alarma cableada">
-            <div class="alarmaEstilo--info">
-                <p>Alarma alámbrica</p>
-                <ul>
-                    <li>Mayor alcance</li>
-                    <li>Mayor compatibilidad con dispositivos</li>
-                    <li>Conectividad con aplicaciones</li>
-                </ul>
-            </div>
-        </div>
-        <p class="d-flex justify-content-center mt-3 rowAlarmas__precioTexto"><b>ALARMAS ALÁMBRICAS</b></p>
-        <p class="d-flex justify-content-center rowAlarmas__precio">$30.000 ARS</p>
-    <button type="button" class="btn btn-danger btn-lg botonModal" data-bs-toggle="modal" data-bs-target="#myModal">+ INFO</button>
-    </div>
-    <div class="col-md-4 col-sm-12 rowAlarmas__col" data-aos="flip-right" data-aos-duration="1000" data-aos-once="true">
-        <div class="alarmaEstilo">
-            <img src="./Imagenes/boton-panico.png" alt="botón de pánico">
-            <div class="alarmaEstilo--info">
-                <p>Botón de pánico</p>
-                <ul>
-                    <li>Sirenas interiores y exteriores</li>
-                    <li>Fácil de usar</li>
-                    <li>Sirenas interiores y exteriores</li>
-                </ul>
-            </div>
-        </div>
-        <p class="d-flex justify-content-center mt-3 rowAlarmas__precioTexto"><b>BOTON DE PÁNICO</b></p>
-        <p class="d-flex justify-content-center rowAlarmas__precio">$6.500 ARS</p>
-        <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#myModal">+ INFO</button>
-    </div>
-</div>
 <!-- texto cierre -->
-<div class="row">
-    <div class="col parrafoCierreAlarmas">
-        <p>Kits ideales para cualquier casa o comercio. Protege tu puerta de ingreso y trasera, además de varios ambientes colocando estratégicamente los sensores de movimiento.<br>Consultanos por mas opciones.</p>
+        <div class="parrafoCierreAlarmas">
+            <p>Kits ideales para cualquier casa o comercio. Protege tu puerta de ingreso y trasera, además de varios ambientes colocando estratégicamente los sensores de movimiento.<br>Consultanos por mas opciones.</p>
+        </div>
     </div>
-</div>
-</main>
+    </main>
 <!-- footer -->
-<div class="row">
-    <div class="col chauPadding">
-<footer class="footer">
-    <div class="contenedor__logoFooter">
-        <a href="./index.html"><img class="logo" alt="logo dic security solutions" src="Imagenes/Logo.jpeg"></a>
-    </div>
-    <div class="footer__redes">
-        <h3>Seguinos en redes</h3><br>
-        <a href="https://www.instagram.com/dicsecuritysolutions/"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/DicSeguridad"><i class="fab fa-facebook"></i></a>
-    </div>
-    <div class="footer__redes">
-        <h3>Datos de contacto:</h3><br>
-        <p>Teléfono:<br>+54 9 11 6486-4919 <br>Mail:<br>dic.sscontacto@gmail.com<br></p>
-    </div>
-    <div class="footer__redes footer__redes--whatsapp">
-        <a class="whatsapp" href="https://api.whatsapp.com/send?phone=541164864919&text=Hola%2C+necesito+asesoramiento+sobre+sus+productos."><i class="fab fa-whatsapp"></i></a>
-    </div>
-</footer>
-    </div>
-    </div>
+        <footer class="footer">
+            <div class="contenedor__logoFooter">
+            <a href="./index.html"><img class="logo" alt="logo dic security solutions" src="Imagenes/Logo.jpeg"></a>
+            </div>
+            <div class="footer__redes">
+                <h3>Seguinos en redes</h3><br>
+                <a href="https://www.instagram.com/dicsecuritysolutions/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/DicSeguridad"><i class="fab fa-facebook"></i></a>
+            </div>
+            <div class="footer__redes">
+                <h3>Datos de contacto:</h3><br>
+                <p>Teléfono:<br>+54 9 11 6486-4919 <br>Mail:<br>dic.sscontacto@gmail.com<br></p>
+            </div>
+            <div class="footer__redes footer__redes--whatsapp">
+                <a class="whatsapp" href="https://api.whatsapp.com/send?phone=541164864919&text=Hola%2C+necesito+asesoramiento+sobre+sus+productos."><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </footer>
 <!-- derechos -->
-<div class="row">
-    <div class="col derechos">
+    <div class="derechos">
         <p>© Dic Secutiry Solutions | 2021 | Todos los derechos reservados.</p>
     </div>
-</div>
 
-</div>
 <!--script aos-->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>AOS.init();</script>
