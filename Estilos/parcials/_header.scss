@@ -54,6 +54,9 @@ a::before {
 	background-color: $blanco;
 	transform: scaleX(0);
 	transition: transform 0.3s ease;
+	@include telefono {
+		width: 0%;
+	}
 }
 a:hover::before {
 	transform: scaleX(1);

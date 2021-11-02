@@ -8,6 +8,7 @@
 html {
 	font-size: 62.5%;
 }
+
 /*general*/
 a {
 	text-decoration: none;
@@ -21,6 +22,7 @@ body {
 .container-fluid {
 	padding: 0px;
 }
+
 /*titulos paginas*/
 .titulos__paginas {
 	color: #2b2d42;
@@ -33,6 +35,17 @@ body {
 		font-size: $tamFuente+4.5;
 	}
 }
+
+/*padding bootstrap*/
+div.row {
+	margin: 0px;
+	padding: 0px;
+}
+div.container-fluid {
+	margin: 0px;
+	padding: 0px;
+}
+
 /*animacion titulos*/
 .titulos__paginas {
 	animation: scale-in-center 1s cubic-bezier(.25, .46, .45, .94) both;
