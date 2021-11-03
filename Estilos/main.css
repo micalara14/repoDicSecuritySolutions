@@ -638,6 +638,7 @@ form .formulario {
     font-size: 1.5rem;
     -webkit-animation: none;
             animation: none;
+    text-align: center;
   }
 }
 
