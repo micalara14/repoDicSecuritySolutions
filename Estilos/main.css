@@ -228,8 +228,16 @@ a:hover::before {
   font-size: 2.7rem;
 }
 
-.footer__redes a:hover {
-  color: #8d99ae;
+.footer__redes .whatsapp:hover {
+  color: #25d366;
+}
+
+.footer__redes .fa-facebook:hover {
+  color: #3b5998;
+}
+
+.footer__redes .fa-instagram:hover {
+  color: #8134af;
 }
 
 .footer__redes h3 {
@@ -628,6 +636,8 @@ form .formulario {
   .trabajaConNosotros {
     width: 80%;
     font-size: 1.5rem;
+    -webkit-animation: none;
+            animation: none;
   }
 }
 
@@ -780,7 +790,7 @@ form .formulario {
 }
 
 .grid__img--info:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 /*introducción*/
@@ -794,6 +804,10 @@ form .formulario {
 
 .textoAlarmas__titulos {
   color: #edf2f4;
+}
+
+.textoAlarmas h1 {
+  text-shadow: black 3px 2px;
 }
 
 .textoAlarmas p {
@@ -838,7 +852,7 @@ form .formulario {
 
 /*introducción*/
 .textoCamaras {
-  background-image: url(../Imagenes/fondo-camaras.jpg);
+  background-image: url(../../Imagenes/fondo-camaras.jpg);
   background-position: center;
   background-size: cover;
   padding: 8rem;
@@ -847,6 +861,10 @@ form .formulario {
 
 .textoCamaras__titulo {
   color: #edf2f4;
+}
+
+.textoCamaras h1 {
+  text-shadow: black 3px 2px;
 }
 
 .textoCamaras p {
@@ -944,6 +962,7 @@ form .formulario {
   left: 0;
   width: 100%;
   height: 100%;
+  border-radius: 16%;
   padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;

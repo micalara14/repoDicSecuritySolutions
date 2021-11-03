@@ -101,5 +101,6 @@
 	@include telefono {
 		width: 80%;
 		font-size: $tamFuente;
+		animation: none;
 	}
 }

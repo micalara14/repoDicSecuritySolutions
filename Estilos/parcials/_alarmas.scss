@@ -9,6 +9,9 @@
 		@extend .titulos__paginas;
 		color: $blanco;
 	}
+	h1 {
+		text-shadow: black 3px 2px;
+	}
 	p {
 		font-size: $tamFuente+1;
 		text-shadow: black 2px 2px;

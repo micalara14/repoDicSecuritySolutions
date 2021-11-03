@@ -19,8 +19,14 @@
 			margin: 0 2rem;
 			font-size: $tamFuente+1.2;
 		}
-		a:hover {
-			color: $gris;
+		.whatsapp:hover {
+			color: #25d366;
+		}
+		.fa-facebook:hover {
+			color: #3b5998;
+		}
+		.fa-instagram:hover {
+			color: #8134af;
 		}
 		h3 {
 			text-align: center;
