@@ -531,6 +531,12 @@ form .formulario {
           box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 768px) {
+  .divNosotros__img {
+    height: 100%;
+  }
+}
+
 .divNosotros .main__texto__nosotros {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -558,6 +564,15 @@ form .formulario {
 }
 
 /*contacto*/
+.parrafoUbicacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 .row__parrafoUbicacion {
   color: #2b2d42;
   background-color: #edf2f4;
