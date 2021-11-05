@@ -44,6 +44,7 @@
 	font-size: $tamFuente+0.7;
 	margin: 2rem;
 	padding: 0rem 5rem 5rem 5rem;
+	text-align: center;
 
 	@include telefono {
 		font-size: 2rem;

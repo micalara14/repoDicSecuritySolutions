@@ -4,6 +4,9 @@
 	font-family: $fuenteM;
 	color: $azul;
 	padding: 3rem;
+	@include telefono {
+		text-align: center;
+	}
 }
 
 h1 {
