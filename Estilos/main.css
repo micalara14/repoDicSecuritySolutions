@@ -875,7 +875,7 @@ form .formulario {
 
 /*introducción*/
 .textoCamaras {
-  background-image: url(../../Imagenes/fondo-camaras.jpg);
+  background-image: url(../Imagenes/fondo-camaras.jpg);
   background-position: center;
   background-size: cover;
   padding: 8rem;
