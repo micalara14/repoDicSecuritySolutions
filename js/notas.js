@@ -32,6 +32,7 @@ if (roomPrice > 0) {
 		total = roomPrice + installationPrice;
 		alert('Hola, ' + name + '! El precio del trabajo con instalación incluida es $' + total);
 	}
+} else {
 }
 
 sum(roomPrice, installationPrice);
