@@ -48,3 +48,19 @@ if (plus.toUpperCase() == 'SI') {
 } else {
 	alert('Ingrese una respuesta válida');
 }
+
+//.........................
+
+function Cameras(model, year, range) {
+	this.model = model;
+	this.year = year;
+	this.range = range;
+}
+
+let camera1 = new Cameras('Hikvision 2.0', 2016, '2 mts');
+let camera2 = new Cameras('Dahua Magnetica', 2018, '3 mts');
+let camera3 = new Cameras('Hezviz 360º', 2018, '5mts');
+
+console.log(camera1);
+console.log(camera2);
+console.log(camera3);

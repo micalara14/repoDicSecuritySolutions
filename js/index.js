@@ -1,49 +1,34 @@
 /**
- * @challenge: Programacion avanzada con funciones - Desafío 4
+ * @challenge: Incorporar objetos - Desafío 5
  * 
- * @version: v1.3.0
+ * @version: v1.4.0
  * @author: Micaela Mendoza
- * @fecha: 02/12/2021
+ * @fecha: 06/12/2021
  *
  * History:
  * v1.0.0 - Desafío 1
  * v1.1.0 - Desafío 2
  * v1.2.0 - Desafío 3
+ * v1.3.0 - Desafío 4
  */
 
-let name = prompt('Ingrese su nombre');
-
-let roomPrice = parseInt(prompt('Ingrese número de habitaciones a asegurar'));
-
-if (roomPrice <= 2 && roomPrice > 0) {
-	roomPrice = 2000;
-} else if (roomPrice && roomPrice > 0) {
-	roomPrice = 4000;
-} else if (roomPrice >= 4 && roomPrice > 0) {
-	roomPrice = 6000;
-} else {
-	alert('Ingrese un número válido');
-}
-
-let installationPrice = 1000;
-
-if (roomPrice > 0) {
-	function sum(roomPrice, installationPrice) {
-		total = roomPrice + installationPrice;
-		alert('Hola, ' + name + '! El precio del trabajo con instalación incluida es $' + total);
+class Camera {
+	constructor(model, year, range) {
+		this.model = model;
+		this.year = year;
+		this.range = range;
+	}
+	final() {
+		console.log(`El modelo es ${this.model}, el año del modelo es ${this.year} y el rango es de ${this.range}`);
 	}
 }
 
-sum(roomPrice, installationPrice);
+let camera1 = new Camera('Hikvision', 2010, '3mts');
+let camera2 = new Camera('Dahua', 2015, '4mts');
+let camera3 = new Camera('Hezviz', 2020, '7mts');
 
-let plus = prompt('Quiere agregar un seguro? Ingrese SI o NO');
-let plusTotal = total + 1000;
-let wPlusTotal = total;
+camera1.final();
+camera2.final();
+camera3.final();
 
-if (plus.toUpperCase() == 'SI') {
-	alert('El precio final es $' + plusTotal);
-} else if (plus.toUpperCase() == 'NO') {
-	alert('El precio final es $' + wPlusTotal);
-} else {
-	alert('Ingrese una respuesta válida');
-}
+console.log(camera1, camera2, camera3);
