@@ -87,3 +87,16 @@
 // camera3.final();
 
 // console.log(camera1, camera2, camera3);
+
+//............................
+
+//CREANDO ARRAY DE PRECIOS
+// let priceCameras = [ allCameras.filter((camera) => camera.price > 0) ];
+
+// console.log(priceCameras);
+
+// //ORDENANDO ARRAYS DE PRECIOS
+// priceCameras.sort(function(a, b) {
+// 	return a - b;
+// });
+// console.log(priceCameras);

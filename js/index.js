@@ -32,3 +32,19 @@ console.log(moreCameras); //Mostrando array 2 por consola
 console.log(allCameras); //Mostrando concatenación de arrays por consola
 
 console.log(allCameras.filter((camera) => camera.price < 4500)); //Mostrando por consola cámaras con un precio menor que $4500
+
+//ORDENANDO ARRAY POR PRECIO DE MENOR A MAYOR
+console.log(
+	allCameras.sort(function(a, b) {
+		return a.price - b.price;
+	})
+);
+
+//ARRAYS DE NÚMEROS Y ORDEN
+let numbers = [ 23, 76, 899, 1, 45, 543, 666, 432, 14 ];
+
+numbers.sort(function(a, b) {
+	return a - b;
+});
+
+console.log(numbers);
