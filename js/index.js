@@ -1,34 +1,34 @@
 /**
- * @challenge: Incorporar objetos - Desafío 5
+ * @challenge: Arrays - Desafío 6
  * 
- * @version: v1.4.0
+ * @version: v1.5.0
  * @author: Micaela Mendoza
- * @fecha: 06/12/2021
+ * @fecha: 09/12/2021
  *
  * History:
  * v1.0.0 - Desafío 1
  * v1.1.0 - Desafío 2
  * v1.2.0 - Desafío 3
  * v1.3.0 - Desafío 4
+ * v1.4.0 - Desafío 5
  */
 
-class Camera {
-	constructor(model, year, range) {
-		this.model = model;
-		this.year = year;
-		this.range = range;
-	}
-	final() {
-		console.log(`El modelo es ${this.model}, el año del modelo es ${this.year} y el rango es de ${this.range}`);
-	}
-}
+//ARRAY UNO
+let cameras = [
+	{ brand: 'Hikvision', model: 1.6, range: '2.5mts', price: 4900 },
+	{ brand: 'Dahua', model: 1.5, range: '2mts', price: 4000 },
+	{ brand: 'Hikvision', model: 2.0, range: '3.5mts', price: 5500 }
+];
 
-let camera1 = new Camera('Hikvision', 2010, '3mts');
-let camera2 = new Camera('Dahua', 2015, '4mts');
-let camera3 = new Camera('Hezviz', 2020, '7mts');
+//ARRAY DOS
+let moreCameras = [ { brand: 'Ezviz', model: 1.8, range: '2.5mts', price: 4200 } ];
 
-camera1.final();
-camera2.final();
-camera3.final();
+//CONCATENANDO ARRAYS
+let allCameras;
+allCameras = cameras.concat(moreCameras);
 
-console.log(camera1, camera2, camera3);
+console.log(cameras); //Mostrando array 1 por consola
+console.log(moreCameras); //Mostrando array 2 por consola
+console.log(allCameras); //Mostrando concatenación de arrays por consola
+
+console.log(allCameras.filter((camera) => camera.price < 4500)); //Mostrando por consola cámaras con un precio menor que $4500
