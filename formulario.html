@@ -37,8 +37,8 @@
                     <li class="nav-item dropdown p-4 nav__menu--instalaciones">
                     <a class="nav-link dropdown-toggle" style="color:#edf2f4" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Instalaciones</a>
                     <ul class="dropdown-menu nav__menu" style="background-color:#2b2d42" aria-labelledby="navbarDropdownMenuLink">
-                        <li class="nav__menu--camaras"><a class="dropdown-item" href="./camaras.html">Cámaras</a></li>
-                        <li class="nav__menu--alarmas"><a class="dropdown-item" href="./alarmas.html">Alarmas</a></li>
+                        <li class="nav__menu--camaras"><a class="dropdown-item" href="./camaras.html">Cámaras/Alarmas</a></li>
+                        <!-- <li class="nav__menu--alarmas"><a class="dropdown-item" href="./alarmas.html">Alarmas</a></li> -->
                     </ul>
                     </li>
                 </ul>
@@ -53,7 +53,7 @@
         <h2><b>Formulario de contacto</b></h2>
         <p>¿Querés mas información? Completá los campos y nos pondremos en contacto:</p>
         </div>
-        <form>
+        <form id="formulario">
         <div class="m-5 formulario">
         <div class="mb-3">
             <label for="mailControlInput1" class="form-label">Mail</label>
@@ -67,9 +67,9 @@
             <label for="FormControlTextarea1" class="form-label">Consulta</label>
             <textarea class="form-control" id="FormControlTextarea1" rows="3"></textarea>
         </div>
-        <div class="flex-row">
-            <button type="submit" class="btn btn-primary border border-danger border-2 boton" style="background-color:#8d99ae">Enviar</button>
-            <button type="reset" value="Reset" class="btn btn-primary border border-danger border-2 boton" style="background-color:#8d99ae">Limpiar</button>
+        <div class="flex-row" id="divButtons">
+            <button id="send" type="submit" class="btn btn-primary border border-danger border-2 boton" style="background-color:#8d99ae">Enviar</button>
+            <button onclick="rst()" type="reset" value="Reset" class="btn btn-primary border border-danger border-2 boton" style="background-color:#8d99ae">Limpiar</button>
         </div>
         </div>
         </form>
@@ -98,5 +98,6 @@
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="js/formulario-contacto.js"></script>
 </body>
 </html>

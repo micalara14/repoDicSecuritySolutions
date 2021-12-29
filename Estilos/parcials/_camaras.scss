@@ -1,6 +1,6 @@
 /*introducción*/
 .textoCamaras {
-	background-image: url(../Imagenes/fondo-camaras.jpg);
+	background-image: url(../Imagenes/fondo-alarmas.jpg);
 	background-position: center;
 	background-size: cover;
 	padding: 8rem;
@@ -122,6 +122,45 @@
 .formularioModal {
 	@include telefono {
 		font-size: $tamFuente;
+	}
+}
+
+/*precios de instalaciones*/
+.divPrecios {
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+	margin: 2rem;
+	@include telefono {
+		justify-content: center;
+	}
+}
+
+.precioZonas {
+	border-bottom: solid 0.3rem $azul;
+	margin: 3rem;
+	padding-bottom: 3rem;
+	h4 {
+		font-size: $tamFuente+1;
+		font-family: $fuenteM;
+		color: $azul;
+	}
+	p {
+		font-size: $tamFuente+1;
+		font-family: $fuenteM;
+		color: $azul;
+	}
+}
+
+.btn-center {
+	display: flex;
+	justify-content: center;
+	button {
+		padding: 2rem;
+		font-size: $tamFuente;
+		background-color: $blanco;
+		color: $rojo;
+		box-shadow: 2px 3px 10px 5px rgba(0, 0, 0, 0.3);
 	}
 }
 

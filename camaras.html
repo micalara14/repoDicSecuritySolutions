@@ -67,8 +67,8 @@
             <li class="nav-item dropdown p-4 nav__menu--instalaciones">
             <a class="nav-link dropdown-toggle" style="color:#edf2f4" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Instalaciones</a>
             <ul class="dropdown-menu nav__menu" style="background-color:#2b2d42" aria-labelledby="navbarDropdownMenuLink">
-                <li class="nav__menu--camaras"><a class="dropdown-item" href="#">Cámaras</a></li>
-                <li class="nav__menu--alarmas"><a class="dropdown-item" href="./alarmas.html">Alarmas</a></li>
+                <li class="nav__menu--camaras"><a class="dropdown-item" href="#">Cámaras/Alarmas</a></li>
+                <!-- <li class="nav__menu--alarmas"><a class="dropdown-item" href="./alarmas.html">Alarmas</a></li> -->
             </ul>
             </li>
         </ul>
@@ -80,8 +80,8 @@
     <div class="container-fluid">
 <!-- camaras wifi -->
         <div class="textoCamaras">
-            <div class="textoCamaras__titulo"><h1 class=h1Html>Cámaras</h1></div>
-            <p>Cámaras con conexión WIFI/LAN que permiten almacenar videos en memorias SD y ver en tiempo real desde la aplicación.<br><b>Los precios incluyen instalación. Aceptamos todos los medios de pago.</b></p>
+            <div class="textoCamaras__titulo"><h1 class=h1Html>Cámaras y Alarmas</h1></div>
+            <p>Cámaras con conexión WIFI/LAN que permiten almacenar videos en memorias SD y ver en tiempo real desde la aplicación.<br><b>Aceptamos todos los medios de pago.</b></p>
         </div>
 <!-- precio camaras -->
         <div class="row rowCamaras">
@@ -100,7 +100,8 @@
                 </div>
                 <p class="d-flex justify-content-center mt-3 rowCamaras__precioTexto"><b>Cámara WIFI con visión nocturna, luz y parlante</b></p>
                 <p class="d-flex justify-content-center rowCamaras__precio">$22.500 ARS</p>
-                <button type="button" class="btn btn-danger btn-lg botonModal" data-bs-toggle="modal" data-bs-target="#myModal">+ INFO</button>
+                <!-- <button type="button" class="btn btn-danger btn-lg botonModal" data-bs-toggle="modal" data-bs-target="#myModal">+ INFO</button> -->
+                <button type="button" class="btn btn-danger btn-lg botonModal" id="comprar">COMPRAR</button>
             </div>
             <div class="col-md-4 col-sm-12 rowCamaras__col" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
                     <div class="camaraEstilo">
@@ -136,9 +137,92 @@
                 <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#myModal">+ INFO</button>
             </div>
         </div>
+<!-- precio alarmas -->
+<div class="row rowAlarmas">
+    <div class="col-md-4 col-sm-12 rowAlarmas__col" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+        <div class="alarmaEstilo">
+            <img src="./Imagenes/alarma-inalambrica.png" alt="alarma inalámbrica">
+            <div class="alarmaEstilo--info">
+                <p>Alarmas inalámbricas</p>
+                <ul>
+                    <li>Duración de batería de 4 a 6 años</li>
+                    <li>No llevan cables, muy estéticas</li>
+                    <li>Conectividad con aplicaciones</li>
+                </ul>
+            </div>
+        </div>
+        <p class="d-flex justify-content-center mt-3 rowAlarmas__precioTexto"><b>ALARMAS INALÁMBRICAS</b></p>
+        <p class="d-flex justify-content-center rowAlarmas__precio">$45.000 ARS</p>
+        <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#myModal">+ INFO</button>
+    </div>
+    <div class="col-md-4 col-sm-12 rowAlarmas__col" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+        <div class="alarmaEstilo">
+            <img src="./Imagenes/alarma-cableada.png" alt="alarma cableada">
+            <div class="alarmaEstilo--info">
+                <p>Alarma alámbrica</p>
+                <ul>
+                    <li>Mayor alcance</li>
+                    <li>Mayor compatibilidad con dispositivos</li>
+                    <li>Conectividad con aplicaciones</li>
+                </ul>
+            </div>
+        </div>
+        <p class="d-flex justify-content-center mt-3 rowAlarmas__precioTexto"><b>ALARMAS ALÁMBRICAS</b></p>
+        <p class="d-flex justify-content-center rowAlarmas__precio">$30.000 ARS</p>
+        <button type="button" class="btn btn-danger btn-lg botonModal" data-bs-toggle="modal" data-bs-target="#myModal">+ INFO</button>
+    </div>
+    <div class="col-md-4 col-sm-12 rowAlarmas__col" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+        <div class="alarmaEstilo">
+            <img src="./Imagenes/boton-panico.png" alt="botón de pánico">
+            <div class="alarmaEstilo--info">
+                <p>Botón de pánico</p>
+                <ul>
+                    <li>Sirenas interiores y exteriores</li>
+                    <li>Fácil de usar</li>
+                    <li>Sirenas interiores y exteriores</li>
+                </ul>
+            </div>
+        </div>
+        <p class="d-flex justify-content-center mt-3 rowAlarmas__precioTexto"><b>BOTON DE PÁNICO</b></p>
+        <p class="d-flex justify-content-center rowAlarmas__precio">$6.500 ARS</p>
+        <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#myModal">+ INFO</button>
+    </div>
+</div>
+<!-- texto cierre -->
         <div class="row__textoCierre">
             <p>Consultanos por más propuestas y precios ajustados a tus necesidades, ya sea para tu hogar o negocio.</p>
         </div>
+<!-- precios según zona -->
+
+<div class="row__textoMarcas">
+<h4>Precios de instalación según zona</h4>
+</div>
+    
+<div class="divPrecios row">
+    <div class="col-md-3 btn-center" id="divGba1Precio">
+        <button id="boton1">Click para ver precio Zona Sur</button>
+    </div>
+    
+    <div class="col-md-3 btn-center" id="divGba2Precio">
+        <button id="boton2">Click para ver precio Zona Norte</button>
+    </div>
+    
+    <div class="col-md-3 btn-center" id="divGba3Precio">
+        <button id="boton3">Click para ver precio Zona Oeste</button>
+    </div>
+    
+    <div class="col-md-3 btn-center" id="divCabaPrecio">
+        <button id="boton4">Click para ver precio CABA</button>
+    </div>
+</div>
+    
+<div class="text-center mt-5 precioZonas">
+    <h4>Precio:</h4>
+    <p id="precio"></p>
+</div>
+
+
+
 <!-- marcas trabajadas -->
         <div class="ms-3 me-3">
             <div class="row__textoMarcas">
@@ -162,9 +246,12 @@
                 <h4>Colores vivos en cualquier entorno</h4>
                 <p>La línea ColorVu de Hikvision permite a las cámaras producir vídeos con vivos colores incluso en entornos con poca luz. Descubrí en el siguiente video cómo el color ayuda a contar verdaderas historias</p>
             </div>
-            <div class="col-md-7 col-sm-12 rowTecnologia__video">
-                <iframe class="rowTecnologia__video--vid" width="560" height="315" src="https://www.youtube.com/embed/mvcmWCnp-PA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div id="divJson">
+                
             </div>
+            <!-- <div class="col-md-7 col-sm-12 rowTecnologia__video">
+                <iframe class="rowTecnologia__video--vid" width="560" height="315" src="https://www.youtube.com/embed/mvcmWCnp-PA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> -->
         </div>
     </div>
     </main>
@@ -195,5 +282,7 @@
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>AOS.init();</script>
 <!--scrip bootstrap-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script></body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="js/camaras.js"></script>
+</body>
 </html>
