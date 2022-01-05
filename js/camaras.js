@@ -39,34 +39,8 @@ $('#boton4').on('click', function() {
 	});
 });
 
+//......................................
 //PRODUCTOS
-// class Productos {
-// 	constructor(id, name, price, type) {
-// 		this.id = id;
-// 		this.name = name;
-// 		this.price = price;
-// 		this.type = type;
-// 	}
-// }
-
-// let camara1 = new Productos(1, 'Cámara WIFI con vision nocturna, luz y parlante', 22500, 'cámara');
-// let camara2 = new Productos(2, 'Cámara WIFI con visión nocturna', 20000, 'cámara');
-// let camara3 = new Productos(3, 'Cámara WIFI DOMO con movimiento', 19500, 'cámara');
-// let alarma1 = new Productos(4, 'Alarma inalámbrica', 45000, 'alarma');
-// let alarma2 = new Productos(5, 'Alarma alámbrica', 30000, 'alarma');
-// let alarma3 = new Productos(6, 'Botón de pánico', 6500, 'alarma');
-
-// //JSON
-
-// localStorage.setItem('camara 1', JSON.stringify(camara1));
-
-// let divJson = document.getElementById('divJson');
-// ;
-
-// comprar.onclick = () => {
-// 	divJson.innerHTML = `Usted eligió el producto: ${localStorage.getItem('camara 1')}`;
-// };
-
 const productos = [
 	{
 		id: 1,
@@ -111,8 +85,6 @@ const productos = [
 		img: '../Imagenes/boton-panico.png'
 	}
 ];
-
-//CARRITO
 
 let carrito = [];
 

@@ -1,9 +1,9 @@
 /**
- * @challenge: Segunda entrega desafío final
+ * @challenge: Desafío 12 - jQuery: selectores y eventos
  * 
- * @version: v2.0.0
+ * @version: v2.1.0
  * @author: Micaela Mendoza
- * @fecha: 09/12/2021
+ * @fecha: 05/01/2022
  *
  * History:
  * v1.0.0 - Desafío 1
@@ -12,4 +12,5 @@
  * v1.3.0 - Desafío 4
  * v1.4.0 - Desafío 5
  * v1.5.0 - Desafío 6
+ * v2.0.0 - Segunda entrega desafío final
  */
