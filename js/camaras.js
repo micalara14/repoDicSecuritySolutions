@@ -8,47 +8,36 @@ const instalaciones = [
 
 //Zona GBA 1
 let divGba1Precio = document.getElementById('divGba1Precio');
-let boton1 = document.getElementById('boton1');
-
-boton1.onclick = () => {
+$('#boton1').on('click', function() {
 	nuevasInstalaciones = instalaciones.filter((instalacion) => instalacion.incluye === 'Zona Sur');
 	nuevasInstalaciones.forEach((GBA1) => {
-		precio.innerHTML = `$${GBA1.precio}`;
+		$('#precio').html('$' + GBA1.precio);
 	});
-};
+});
 
 //Zona GBA 2
-let divGba2Precio = document.getElementById('divGba2Precio');
-let boton2 = document.getElementById('boton2');
-
-boton2.onclick = () => {
+$('#boton2').on('click', function() {
 	nuevasInstalaciones = instalaciones.filter((instalacion) => instalacion.incluye === 'Zona Norte');
 	nuevasInstalaciones.forEach((GBA2) => {
-		precio.innerHTML = `$${GBA2.precio}`;
+		$('#precio').html('$' + GBA2.precio);
 	});
-};
+});
 
 //Zona GBA 3
-let divGba3Precio = document.getElementById('divGba3Precio');
-let boton3 = document.getElementById('boton3');
-
-boton3.onclick = () => {
+$('#boton3').on('click', function() {
 	nuevasInstalaciones = instalaciones.filter((instalacion) => instalacion.incluye === 'Zona Oeste');
 	nuevasInstalaciones.forEach((GBA3) => {
-		precio.innerHTML = `$${GBA3.precio}`;
+		$('#precio').html('$' + GBA3.precio);
 	});
-};
+});
 
-//Zona GBA 3
-let divCaba3Precio = document.getElementById('divCaba3Precio');
-let boton4 = document.getElementById('boton4');
-
-boton4.onclick = () => {
+//Zona CABA
+$('#boton4').on('click', function() {
 	nuevasInstalaciones = instalaciones.filter((instalacion) => instalacion.incluye === 'CABA');
 	nuevasInstalaciones.forEach((CABA) => {
-		precio.innerHTML = `$${CABA.precio}`;
+		$('#precio').html('$' + CABA.precio);
 	});
-};
+});
 
 //PRODUCTOS
 // class Productos {
