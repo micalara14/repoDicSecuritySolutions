@@ -51,35 +51,103 @@ boton4.onclick = () => {
 };
 
 //PRODUCTOS
-class Productos {
-	constructor(id, name, price, type) {
-		this.id = id;
-		this.name = name;
-		this.price = price;
-		this.type = type;
+// class Productos {
+// 	constructor(id, name, price, type) {
+// 		this.id = id;
+// 		this.name = name;
+// 		this.price = price;
+// 		this.type = type;
+// 	}
+// }
+
+// let camara1 = new Productos(1, 'Cámara WIFI con vision nocturna, luz y parlante', 22500, 'cámara');
+// let camara2 = new Productos(2, 'Cámara WIFI con visión nocturna', 20000, 'cámara');
+// let camara3 = new Productos(3, 'Cámara WIFI DOMO con movimiento', 19500, 'cámara');
+// let alarma1 = new Productos(4, 'Alarma inalámbrica', 45000, 'alarma');
+// let alarma2 = new Productos(5, 'Alarma alámbrica', 30000, 'alarma');
+// let alarma3 = new Productos(6, 'Botón de pánico', 6500, 'alarma');
+
+// //JSON
+
+// localStorage.setItem('camara 1', JSON.stringify(camara1));
+
+// let divJson = document.getElementById('divJson');
+// ;
+
+// comprar.onclick = () => {
+// 	divJson.innerHTML = `Usted eligió el producto: ${localStorage.getItem('camara 1')}`;
+// };
+
+const productos = [
+	{
+		id: 1,
+		name: 'Cámara WIFI con vision nocturna, luz y parlante',
+		price: 22500,
+		type: 'cámara',
+		img: '../Imagenes/camara-wifi-1.png'
+	},
+	{
+		id: 2,
+		name: 'Cámara WIFI con visión nocturna',
+		price: 20000,
+		type: 'cámara',
+		img: '../Imagenes/camara-wifi-2.png'
+	},
+	{
+		id: 3,
+		name: 'Cámara WIFI DOMO con movimiento',
+		price: 19500,
+		type: 'cámara',
+		img: '../Imagenes/camara-domo.png'
+	},
+	{
+		id: 4,
+		name: 'Alarma inalámbrica',
+		price: 45000,
+		type: 'alarma',
+		img: '../Imagenes/alarma-inalambrica.png'
+	},
+	{
+		id: 5,
+		name: 'Alarma alámbrica',
+		price: 30000,
+		type: 'alarma',
+		img: '../Imagenes/alarma-cableada.png'
+	},
+	{
+		id: 6,
+		name: 'Botón de pánico',
+		price: 6500,
+		type: 'alarma',
+		img: '../Imagenes/boton-panico.png'
+	}
+];
+
+//CARRITO
+
+let carrito = [];
+
+function rellenarProductos(arrayProductos) {
+	for (let producto of arrayProductos) {
+		$('#rowCamaras')
+			.append(`<div class="col-md-4 col-sm-12 rowCamaras__col" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+		<div class="camaraEstilo">
+			<img src="${producto.img}"> 
+			<div class="camaraEstilo--info">
+				<p>${producto.name}</p>
+				<ul>
+					<li>Visión nocturna a color</li>
+					<li>Luz y parlante</li>
+					<li>Detección de personas</li>
+					<li>Visualización online 24hs</li>
+				</ul>
+			</div>
+		</div>
+		<p class="d-flex justify-content-center mt-3 rowCamaras__precioTexto"><b>${producto.name}</b></p>
+		<p class="d-flex justify-content-center rowCamaras__precio">$${producto.price}</p>
+		<button type="button" class="btn btn-danger btn-lg comprar" id="comprar">COMPRAR</button>
+	</div>`);
 	}
 }
 
-let camara1 = new Productos(1, 'Cámara WIFI con vision nocturna, luz y parlante', 22500, 'cámara');
-let camara2 = new Productos(2, 'Cámara WIFI con visión nocturna', 20000, 'cámara');
-let camara3 = new Productos(3, 'Cámara WIFI DOMO con movimiento', 19500, 'cámara');
-let alarma1 = new Productos(4, 'Alarma inalámbrica', 45000, 'alarma');
-let alarma2 = new Productos(5, 'Alarma alámbrica', 30000, 'alarma');
-let alarma3 = new Productos(6, 'Botón de pánico', 6500, 'alarma');
-
-//JSON
-
-localStorage.setItem('camara 1', JSON.stringify(camara1));
-
-let divJson = document.getElementById('divJson');
-
-// boton2.onclick = () => {
-// 	nuevasInstalaciones = instalaciones.filter((instalacion) => instalacion.incluye === 'Zona Norte');
-// 	nuevasInstalaciones.forEach((GBA2) => {
-// 		precio.innerHTML = `$${GBA2.precio}`;
-// 	});
-// };
-
-comprar.onclick = () => {
-	divJson.innerHTML = `Usted eligió el producto: ${localStorage.getItem('camara 1')}`;
-};
+rellenarProductos(productos);
