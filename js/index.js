@@ -1,9 +1,9 @@
 /**
- * @challenge: Desafío 12 - jQuery: selectores y eventos
+ * @challenge:  Desafío 13 - Efectos y animaciones con jQuery
  * 
- * @version: v2.1.0
+ * @version: v2.2.0
  * @author: Micaela Mendoza
- * @fecha: 05/01/2022
+ * @fecha: 12/01/2022
  *
  * History:
  * v1.0.0 - Desafío 1
@@ -13,4 +13,5 @@
  * v1.4.0 - Desafío 5
  * v1.5.0 - Desafío 6
  * v2.0.0 - Segunda entrega desafío final
+ * v.2.1.0 - Desafío 12
  */

@@ -104,11 +104,24 @@ function rellenarProductos(arrayProductos) {
 				</ul>
 			</div>
 		</div>
-		<p class="d-flex justify-content-center mt-3 rowCamaras__precioTexto"><b>${producto.name}</b></p>
+		<p id="${producto.id}" class="d-flex justify-content-center mt-3 rowCamaras__precioTexto"><b>${producto.name}</b></p>
+		<div class="mc">
 		<p class="d-flex justify-content-center rowCamaras__precio">$${producto.price}</p>
+		</div>
 		<button type="button" class="btn btn-danger btn-lg comprar" id="comprar">COMPRAR</button>
 	</div>`);
 	}
 }
 
 rellenarProductos(productos);
+
+//ANIMACION ...........................................
+
+$(document).ready(function() {
+	$('.mc').fadeIn(4000);
+	$('.mc').css({
+		'background-color': 'yellow'
+	});
+});
+
+//......................................................

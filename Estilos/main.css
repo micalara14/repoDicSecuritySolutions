@@ -863,10 +863,6 @@ form .formulario {
 }
 
 /*imágenes y precios*/
-.alarmaEstilo--info:hover {
-  opacity: 0.9;
-}
-
 /*cierre*/
 .parrafoCierreAlarmas {
   font-size: 2rem;
@@ -920,11 +916,11 @@ form .formulario {
 }
 
 /*imagenes y precios*/
-.rowCamaras, .rowAlarmas {
+.rowCamaras {
   margin: 2rem;
 }
 
-.rowCamaras__precioTexto, .rowAlarmas__precioTexto {
+.rowCamaras__precioTexto {
   font-size: 1.5rem;
   font-family: "Quicksand", sans-serif;
   color: #2b2d42;
@@ -932,7 +928,7 @@ form .formulario {
   text-align: center;
 }
 
-.rowCamaras__precio, .rowAlarmas__precio {
+.rowCamaras__precio {
   font-size: 2.5rem;
   font-family: "Quicksand", sans-serif;
   color: #d90429;
@@ -942,7 +938,7 @@ form .formulario {
   animation: heartbeat 5s ease-in-out 3s infinite both;
 }
 
-.rowCamaras__col, .rowAlarmas__col {
+.rowCamaras__col {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -959,13 +955,17 @@ form .formulario {
 }
 
 @media (max-width: 480px) {
-  .rowCamaras__col, .rowAlarmas__col {
+  .rowCamaras__col {
     margin-top: 3.5rem;
     margin-bottom: 3.5rem;
   }
 }
 
-.camaraEstilo, .alarmaEstilo {
+.mc {
+  display: none;
+}
+
+.camaraEstilo {
   position: relative;
   overflow: hidden;
   margin: 2rem;
@@ -976,16 +976,16 @@ form .formulario {
 }
 
 @media (max-width: 480px) {
-  .camaraEstilo, .alarmaEstilo {
+  .camaraEstilo {
     width: 100%;
   }
 }
 
-.camaraEstilo img, .alarmaEstilo img {
+.camaraEstilo img {
   width: 100%;
 }
 
-.camaraEstilo--info, .alarmaEstilo--info {
+.camaraEstilo--info {
   position: absolute;
   top: 0;
   left: 0;
@@ -1015,20 +1015,20 @@ form .formulario {
   opacity: 0;
 }
 
-.camaraEstilo--info p, .alarmaEstilo--info p {
+.camaraEstilo--info p {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
   margin: 2rem;
 }
 
-.camaraEstilo--info ul, .alarmaEstilo--info ul {
+.camaraEstilo--info ul {
   text-align: center;
   list-style: none;
   padding: 0;
 }
 
-.camaraEstilo--info:hover, .alarmaEstilo--info:hover {
+.camaraEstilo--info:hover {
   opacity: 0.9;
 }
 
