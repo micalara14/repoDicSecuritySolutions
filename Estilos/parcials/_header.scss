@@ -70,22 +70,36 @@ a:hover::before {
 	}
 }
 
-/*estetica alarmas*/
-.nav__menu--alarmas {
-	a {
-		color: $blanco;
-	}
-}
-.nav__menu--alarmas a:hover {
-	color: $rojo;
-}
+// /*estetica alarmas*/
+// .nav__menu--alarmas {
+// 	a {
+// 		color: $blanco;
+// 	}
+// }
+// .nav__menu--alarmas a:hover {
+// 	color: $rojo;
+// }
 
 /*estetica camaras*/
 .nav__menu--camaras {
 	a {
 		color: $blanco;
+		margin: 0px;
 	}
 }
 .nav__menu--camaras a:hover {
 	color: $rojo;
+}
+
+.nav__menu--carrito {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	a {
+		color: $blanco;
+		margin: 1rem;
+	}
+	a:hover::before {
+		transform: scaleX(0);
+	}
 }

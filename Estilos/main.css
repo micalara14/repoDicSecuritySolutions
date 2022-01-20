@@ -178,22 +178,36 @@ a:hover::before {
   width: 0%;
 }
 
-/*estetica alarmas*/
-.nav__menu--alarmas a {
-  color: #edf2f4;
-}
-
-.nav__menu--alarmas a:hover {
-  color: #d90429;
-}
-
 /*estetica camaras*/
 .nav__menu--camaras a {
   color: #edf2f4;
+  margin: 0px;
 }
 
 .nav__menu--camaras a:hover {
   color: #d90429;
+}
+
+.nav__menu--carrito {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__menu--carrito a {
+  color: #edf2f4;
+  margin: 1rem;
+}
+
+.nav__menu--carrito a:hover::before {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
 }
 
 .chauPadding {
@@ -497,6 +511,20 @@ form .formulario {
 .boton:hover {
   -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
           box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.result {
+  margin: 1rem;
+  background-color: #d90429;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  color: #edf2f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /*foto+texto*/
@@ -857,10 +885,6 @@ form .formulario {
 }
 
 /*imágenes y precios*/
-.alarmaEstilo--info:hover {
-  opacity: 0.9;
-}
-
 /*cierre*/
 .parrafoCierreAlarmas {
   font-size: 2rem;
@@ -875,7 +899,7 @@ form .formulario {
 
 /*introducción*/
 .textoCamaras {
-  background-image: url(../Imagenes/fondo-camaras.jpg);
+  background-image: url(../Imagenes/fondo-alarmas.jpg);
   background-position: center;
   background-size: cover;
   padding: 8rem;
@@ -914,11 +938,11 @@ form .formulario {
 }
 
 /*imagenes y precios*/
-.rowCamaras, .rowAlarmas {
+.rowCamaras {
   margin: 2rem;
 }
 
-.rowCamaras__precioTexto, .rowAlarmas__precioTexto {
+.rowCamaras__precioTexto {
   font-size: 1.5rem;
   font-family: "Quicksand", sans-serif;
   color: #2b2d42;
@@ -926,17 +950,15 @@ form .formulario {
   text-align: center;
 }
 
-.rowCamaras__precio, .rowAlarmas__precio {
+.rowCamaras__precio {
   font-size: 2.5rem;
   font-family: "Quicksand", sans-serif;
   color: #d90429;
   font-weight: bolder;
   text-shadow: 0.1rem 0.1rem #8d99ae;
-  -webkit-animation: heartbeat 5s ease-in-out 3s infinite both;
-  animation: heartbeat 5s ease-in-out 3s infinite both;
 }
 
-.rowCamaras__col, .rowAlarmas__col {
+.rowCamaras__col {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -953,13 +975,17 @@ form .formulario {
 }
 
 @media (max-width: 480px) {
-  .rowCamaras__col, .rowAlarmas__col {
+  .rowCamaras__col {
     margin-top: 3.5rem;
     margin-bottom: 3.5rem;
   }
 }
 
-.camaraEstilo, .alarmaEstilo {
+.bkPrice {
+  display: none;
+}
+
+.camaraEstilo {
   position: relative;
   overflow: hidden;
   margin: 2rem;
@@ -970,16 +996,16 @@ form .formulario {
 }
 
 @media (max-width: 480px) {
-  .camaraEstilo, .alarmaEstilo {
+  .camaraEstilo {
     width: 100%;
   }
 }
 
-.camaraEstilo img, .alarmaEstilo img {
+.camaraEstilo img {
   width: 100%;
 }
 
-.camaraEstilo--info, .alarmaEstilo--info {
+.camaraEstilo--info {
   position: absolute;
   top: 0;
   left: 0;
@@ -1009,20 +1035,20 @@ form .formulario {
   opacity: 0;
 }
 
-.camaraEstilo--info p, .alarmaEstilo--info p {
+.camaraEstilo--info p {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
   margin: 2rem;
 }
 
-.camaraEstilo--info ul, .alarmaEstilo--info ul {
+.camaraEstilo--info ul {
   text-align: center;
   list-style: none;
   padding: 0;
 }
 
-.camaraEstilo--info:hover, .alarmaEstilo--info:hover {
+.camaraEstilo--info:hover {
   opacity: 0.9;
 }
 
@@ -1041,6 +1067,62 @@ form .formulario {
   .formularioModal {
     font-size: 1.5rem;
   }
+}
+
+/*precios de instalaciones*/
+.divPrecios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 2rem;
+}
+
+@media (max-width: 480px) {
+  .divPrecios {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.precioZonas {
+  border-bottom: solid 0.3rem #2b2d42;
+  margin: 3rem;
+  padding-bottom: 3rem;
+}
+
+.precioZonas h4 {
+  font-size: 2.5rem;
+  font-family: "Quicksand", sans-serif;
+  color: #2b2d42;
+}
+
+.precioZonas p {
+  font-size: 2.5rem;
+  font-family: "Quicksand", sans-serif;
+  color: #2b2d42;
+}
+
+.btn-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn-center button {
+  padding: 2rem;
+  font-size: 1.5rem;
+  background-color: #edf2f4;
+  color: #d90429;
+  -webkit-box-shadow: 2px 3px 10px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 3px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
 /*marcas de camaras*/
@@ -1122,7 +1204,7 @@ form .formulario {
   color: #2b2d42;
 }
 
-.rowTecnologia__video {
+.rowTecnologia__opiniones {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1132,22 +1214,30 @@ form .formulario {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding-bottom: 3rem;
 }
 
-.rowTecnologia__video .rowTecnologia__video--vid {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  width: 80%;
-  margin: 3rem;
-  border-radius: 5%;
-  -webkit-box-shadow: 2px 3px 10px 5px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 3px 10px 5px rgba(0, 0, 0, 0.3);
+.rowTecnologia__opiniones p {
+  font-size: 1.5rem;
+  font-family: "Quicksand", sans-serif;
+  color: #2b2d42;
+  font-weight: bold;
 }
 
-@media (max-width: 480px) {
-  .rowTecnologia__video .rowTecnologia__video--vid {
-    width: 100%;
-  }
+.rowTecnologia__opiniones--texto {
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.rowTecnologia__opiniones--texto p {
+  font-family: "Quicksand", sans-serif;
+  color: #2b2d42;
 }
 
 /*animacion precios*/
@@ -1218,6 +1308,19 @@ form .formulario {
     transform: scale(1);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
+  }
+}
+
+.tituloCarrito {
+  font-size: 3.5rem;
+  font-family: "Quicksand", sans-serif;
+  color: #2b2d42;
+  padding: 2rem;
+}
+
+@media (max-width: 480px) {
+  .tituloCarrito {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=main.css.map */

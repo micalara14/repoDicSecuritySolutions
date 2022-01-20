@@ -1,0 +1,22 @@
+[
+	{
+		"zona": "GBA 1",
+		"precio": 2500,
+		"incluye": "Zona Sur"
+	},
+	{
+		"zona": "GBA 2",
+		"precio": 2700,
+		"incluye": "Zona Norte"
+	},
+	{
+		"zona": "GBA 3",
+		"precio": 2500,
+		"incluye": "Zona Oeste"
+	},
+	{
+		"zona": "CABA",
+		"precio": 2300,
+		"incluye": "CABA"
+	}
+]

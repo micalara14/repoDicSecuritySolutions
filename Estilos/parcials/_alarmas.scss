@@ -32,27 +32,27 @@
 
 /*imágenes y precios*/
 
-.rowAlarmas {
-	@extend .rowCamaras;
-	&__precioTexto {
-		@extend .rowCamaras__precioTexto;
-	}
-	&__precio {
-		@extend .rowCamaras__precio;
-	}
-	&__col {
-		@extend .rowCamaras__col;
-	}
-}
-.alarmaEstilo {
-	@extend .camaraEstilo;
-}
-.alarmaEstilo--info {
-	@extend .camaraEstilo--info;
-}
-.alarmaEstilo--info:hover {
-	opacity: 0.9;
-}
+// .rowAlarmas {
+// 	@extend .rowCamaras;
+// 	&__precioTexto {
+// 		@extend .rowCamaras__precioTexto;
+// 	}
+// 	&__precio {
+// 		@extend .rowCamaras__precio;
+// 	}
+// 	&__col {
+// 		@extend .rowCamaras__col;
+// 	}
+// }
+// .alarmaEstilo {
+// 	@extend .camaraEstilo;
+// }
+// .alarmaEstilo--info {
+// 	@extend .camaraEstilo--info;
+// }
+// .alarmaEstilo--info:hover {
+// 	opacity: 0.9;
+// }
 
 /*cierre*/
 .parrafoCierreAlarmas {

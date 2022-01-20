@@ -26,3 +26,13 @@ form {
 .boton:hover {
 	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
+
+.result {
+	margin: 1rem;
+	background-color: $rojo;
+	font-family: $fuenteO;
+	font-size: $tamFuente;
+	color: $blanco;
+	display: flex;
+	justify-content: center;
+}
