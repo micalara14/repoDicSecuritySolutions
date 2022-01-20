@@ -1,0 +1,38 @@
+.tituloCarrito {
+	font-size: $tamFuente+2rem;
+	font-family: $fuenteM;
+	color: $azul;
+	padding: 2rem;
+	@include telefono {
+		text-align: center;
+	}
+}
+
+// .table {
+// 	font-size: $tamFuente;
+// 	font-family: $fuenteM;
+// 	color: $azul;
+// 	padding-right: 2rem;
+// 	@include telefono {
+// 		text-align: center;
+// 	}
+// 	td {
+// 		margin: 1rem;
+// 	}
+// 	.titleTable {
+// 		p {
+// 			font-size: $tamFuente+1;
+// 			font-weight: bold;
+// 			color: $rojo;
+// 			text-shadow: 1px 1px $gris;
+// 			display: flex;
+// 			justify-content: center;
+// 			align-items: center;
+// 		}
+// 	}
+// }
+// .noName {
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// }

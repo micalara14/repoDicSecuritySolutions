@@ -85,18 +85,21 @@ const productos = [
 	}
 ];
 
+//CARRITO
 let carrito = [];
 
 class ProductoCarrito {
-	constructor(name, id, price, amount, img) {
+	constructor(name, id, price, amount, img, tot) {
 		this.name = name;
 		this.id = id;
 		this.price = price;
 		this.amount = 1;
 		this.img = img;
+		this.tot = price * amount;
 	}
 }
 
+//PRODUCTOS EN PAGINA
 function rellenarProductos(arrayProductos) {
 	for (let producto of arrayProductos) {
 		$('#rowCamaras')
@@ -114,7 +117,9 @@ function rellenarProductos(arrayProductos) {
 			</div>
 		</div>
 		<p id="${producto.id}" class="d-flex justify-content-center mt-3 rowCamaras__precioTexto"><b>${producto.name}</b></p>
+		<div class="bkPrice">
 		<p class="d-flex justify-content-center rowCamaras__precio">$${producto.price}</p>
+		</div>
 		<button type="button" class="btn btn-danger btn-lg comprar" id="comprar">COMPRAR</button>
 	</div>`);
 	}
@@ -122,8 +127,15 @@ function rellenarProductos(arrayProductos) {
 
 rellenarProductos(productos);
 
-// ACCIÓN DEL BOTÓN COMPRAR
+//ANIMACION CON JQUERY EN PRECIO DE PRODUCTOS
+$(document).ready(function() {
+	$('.bkPrice').fadeIn(4000);
+	$('.bkPrice').css({
+		'background-color': 'yellow'
+	});
+});
 
+// ACCIÓN DEL BOTÓN COMPRAR
 let botones = document.querySelectorAll('.comprar');
 
 botones.forEach((elemento) => {
@@ -145,18 +157,31 @@ function comprar(e) {
 	let price = e.target.parentNode.children[2].innerText;
 	let img = e.target.parentNode.children[0].children[0].src;
 	let id = e.target.parentNode.children[1].id;
-
 	price = parseInt(price.replace('$', ''));
 
 	if (index == -1) {
 		const producto = new ProductoCarrito(name, id, price, img);
 		carrito.push(producto);
-		console.log(carrito);
 	} else {
 		carrito[index].amount++;
-
-		console.log(carrito);
 	}
 
 	localStorage.setItem('carrito', JSON.stringify(carrito));
 }
+
+//AJAX CON JQUERY PARA OPINIONES
+const URLGETT = 'https://jsonplaceholder.typicode.com/users';
+
+$('#opiniones').one('click', function() {
+	$.get(URLGETT, function(rta, status) {
+		if (status === 'success') {
+			let datos = rta;
+			for (const dato of datos) {
+				$('.rowTecnologia__opiniones').append(
+					`<div class="rowTecnologia__opiniones--texto">${dato.name}: ${dato.email}</div>`
+				);
+			}
+		}
+	});
+	$('.rowTecnologia__opiniones').append(`<p>Quienes recomiendan nuestros productos:</p>`);
+});

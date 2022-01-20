@@ -46,8 +46,8 @@
 		color: $rojo;
 		font-weight: bolder;
 		text-shadow: 0.1rem 0.1rem $gris;
-		-webkit-animation: heartbeat 5s ease-in-out 3s infinite both;
-		animation: heartbeat 5s ease-in-out 3s infinite both;
+		// -webkit-animation: heartbeat 5s ease-in-out 3s infinite both;
+		// animation: heartbeat 5s ease-in-out 3s infinite both;
 	}
 	&__col {
 		display: flex;
@@ -60,7 +60,9 @@
 		}
 	}
 }
-
+.bkPrice {
+	display: none;
+}
 .camaraEstilo {
 	position: relative;
 	overflow: hidden;
@@ -75,6 +77,7 @@
 		width: 100%;
 	}
 }
+
 .camaraEstilo--info {
 	position: absolute;
 	top: 0;
@@ -200,6 +203,7 @@
 		}
 	}
 }
+
 /*tecnología*/
 .rowTecnologia {
 	&__texto {
@@ -219,20 +223,36 @@
 			color: $azul;
 		}
 	}
-	&__video {
+	&__opiniones {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		.rowTecnologia__video--vid {
-			box-sizing: content-box;
-			width: 80%;
-			margin: 3rem;
-			border-radius: 5%;
-			box-shadow: 2px 3px 10px 5px rgba(0, 0, 0, 0.3);
-			@include telefono {
-				width: 100%;
-			}
+		flex-flow: column;
+		padding-bottom: 3rem;
+		// .rowTecnologia__video--vid {
+		// 	box-sizing: content-box;
+		// 	width: 80%;
+		// 	margin: 3rem;
+		// 	border-radius: 5%;
+		// 	box-shadow: 2px 3px 10px 5px rgba(0, 0, 0, 0.3);
+		// 	@include telefono {
+		// 		width: 100%;
+		// 	}
+		// }
+		p {
+			font-size: $tamFuente;
+			font-family: $fuenteM;
+			color: $azul;
+			font-weight: bold;
 		}
+	}
+}
+.rowTecnologia__opiniones--texto {
+	padding: 5px;
+	display: flex;
+	p {
+		font-family: $fuenteM;
+		color: $azul;
 	}
 }
 
