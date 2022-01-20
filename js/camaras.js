@@ -1,41 +1,40 @@
-//PRECIOS POR ZONA
-const instalaciones = [
-	{ zona: 'GBA 1', precio: 2500, incluye: 'Zona Sur' },
-	{ zona: 'GBA 2', precio: 2700, incluye: 'Zona Norte' },
-	{ zona: 'GBA 3', precio: 2500, incluye: 'Zona Oeste' },
-	{ zona: 'CABA', precio: 2300, incluye: 'CABA' }
-];
+//PRECIOS POR ZONA CON AJAX
+
+const URLGET = '../JSON/pinstalacion.json';
 
 //Zona GBA 1
-let divGba1Precio = document.getElementById('divGba1Precio');
-$('#boton1').on('click', function() {
-	nuevasInstalaciones = instalaciones.filter((instalacion) => instalacion.incluye === 'Zona Sur');
-	nuevasInstalaciones.forEach((GBA1) => {
-		$('#precio').html('$' + GBA1.precio);
+$('#boton1').click(() => {
+	$.getJSON(URLGET, function(respuesta, estado) {
+		if (estado === 'success') {
+			$('#precio').html(` $${respuesta[0].precio}`);
+		}
 	});
 });
 
 //Zona GBA 2
-$('#boton2').on('click', function() {
-	nuevasInstalaciones = instalaciones.filter((instalacion) => instalacion.incluye === 'Zona Norte');
-	nuevasInstalaciones.forEach((GBA2) => {
-		$('#precio').html('$' + GBA2.precio);
+$('#boton2').click(() => {
+	$.getJSON(URLGET, function(respuesta, estado) {
+		if (estado === 'success') {
+			$('#precio').html(` $${respuesta[1].precio}`);
+		}
 	});
 });
 
 //Zona GBA 3
-$('#boton3').on('click', function() {
-	nuevasInstalaciones = instalaciones.filter((instalacion) => instalacion.incluye === 'Zona Oeste');
-	nuevasInstalaciones.forEach((GBA3) => {
-		$('#precio').html('$' + GBA3.precio);
+$('#boton3').click(() => {
+	$.getJSON(URLGET, function(respuesta, estado) {
+		if (estado === 'success') {
+			$('#precio').html(` $${respuesta[2].precio}`);
+		}
 	});
 });
 
 //Zona CABA
-$('#boton4').on('click', function() {
-	nuevasInstalaciones = instalaciones.filter((instalacion) => instalacion.incluye === 'CABA');
-	nuevasInstalaciones.forEach((CABA) => {
-		$('#precio').html('$' + CABA.precio);
+$('#boton4').click(() => {
+	$.getJSON(URLGET, function(respuesta, estado) {
+		if (estado === 'success') {
+			$('#precio').html(` $${respuesta[3].precio}`);
+		}
 	});
 });
 
@@ -88,6 +87,16 @@ const productos = [
 
 let carrito = [];
 
+class ProductoCarrito {
+	constructor(name, id, price, amount, img) {
+		this.name = name;
+		this.id = id;
+		this.price = price;
+		this.amount = 1;
+		this.img = img;
+	}
+}
+
 function rellenarProductos(arrayProductos) {
 	for (let producto of arrayProductos) {
 		$('#rowCamaras')
@@ -105,9 +114,7 @@ function rellenarProductos(arrayProductos) {
 			</div>
 		</div>
 		<p id="${producto.id}" class="d-flex justify-content-center mt-3 rowCamaras__precioTexto"><b>${producto.name}</b></p>
-		<div class="mc">
 		<p class="d-flex justify-content-center rowCamaras__precio">$${producto.price}</p>
-		</div>
 		<button type="button" class="btn btn-danger btn-lg comprar" id="comprar">COMPRAR</button>
 	</div>`);
 	}
@@ -115,13 +122,41 @@ function rellenarProductos(arrayProductos) {
 
 rellenarProductos(productos);
 
-//ANIMACION ...........................................
+// ACCIÓN DEL BOTÓN COMPRAR
 
-$(document).ready(function() {
-	$('.mc').fadeIn(4000);
-	$('.mc').css({
-		'background-color': 'yellow'
-	});
+let botones = document.querySelectorAll('.comprar');
+
+botones.forEach((elemento) => {
+	elemento.addEventListener('click', comprar);
 });
 
-//......................................................
+let subTotal = 0;
+
+function comprar(e) {
+	let carritoGuardado = JSON.parse(localStorage.getItem('carrito'));
+
+	if (carritoGuardado) {
+		carrito = carritoGuardado;
+	}
+
+	let index = carrito.findIndex((producto) => producto.id == e.target.parentNode.children[1].id);
+
+	let name = e.target.parentNode.children[1].innerText;
+	let price = e.target.parentNode.children[2].innerText;
+	let img = e.target.parentNode.children[0].children[0].src;
+	let id = e.target.parentNode.children[1].id;
+
+	price = parseInt(price.replace('$', ''));
+
+	if (index == -1) {
+		const producto = new ProductoCarrito(name, id, price, img);
+		carrito.push(producto);
+		console.log(carrito);
+	} else {
+		carrito[index].amount++;
+
+		console.log(carrito);
+	}
+
+	localStorage.setItem('carrito', JSON.stringify(carrito));
+}
