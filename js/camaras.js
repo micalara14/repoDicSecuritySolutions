@@ -124,8 +124,10 @@ function rellenarProductos(arrayProductos) {
 	</div>`);
 	}
 
-	// let carritoContador = JSON.parse(localStorage.getItem('carrito'));
-	// contadorCarrito(carritoContador);
+	let carritoCamaras = JSON.parse(localStorage.getItem('carrito'));
+	if (carritoCamaras) {
+		contadorCarrito(carritoCamaras);
+	}
 }
 
 rellenarProductos(productos);
@@ -174,6 +176,19 @@ function comprar(e) {
 	});
 
 	localStorage.setItem('carrito', JSON.stringify(carrito));
+
+	contadorCarrito(carrito);
+}
+
+function contadorCarrito(arrayCarrito) {
+	let totalCarrito = 0;
+
+	for (let producto of arrayCarrito) {
+		totalCarrito += producto.amount;
+	}
+
+	$('.contadorCarrito').html(``);
+	$('.contadorCarrito').html(totalCarrito);
 }
 
 //AJAX CON JQUERY PARA OPINIONES
