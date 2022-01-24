@@ -5,7 +5,7 @@ const carrito = JSON.parse(localStorage.getItem('carrito'));
 function rellenarCarrito(arrayCarrito) {
 	for (let producto of arrayCarrito) {
 		$('.tbody').append(
-			`<tr><td> ${producto.name} </td><td> $${producto.price} </td><td> ${producto.amount} </td><td> $${producto.price *
+			`<tr><td> ${producto.name} </td><td> $${producto.price} </td><td> <p class="hola">${producto.amount}</p> <button type="button" class="btn btn-danger agregar">+</button> <button class="btn btn-danger">-</button></td><td> $${producto.price *
 				producto.amount}</td><td><button type="button" class="btn btn-danger delete" id="${producto.id}">Eliminar</button></td></tr>`
 		);
 	}
@@ -13,7 +13,7 @@ function rellenarCarrito(arrayCarrito) {
 
 rellenarCarrito(carrito);
 
-//ELIMINAR ELEMENTO
+//ELIMINAR ELEMENTO........................................................
 
 let botonesDelete = document.querySelectorAll('.delete');
 
@@ -21,19 +21,36 @@ botonesDelete.forEach((elemento) => {
 	elemento.addEventListener('click', borrar);
 });
 
-function borrar(e) {
-	let index = carrito.findIndex((producto) => producto.id == e.target.id);
-	carrito.splice(index, 1);
+//contador carrito
+function contadorCarrito(arrayCarrito) {
+	let totalCarrito = 0;
 
-	let fila = e.target.parentNode.parentNode;
-	fila.remove();
+	for (let producto of arrayCarrito) {
+		totalCarrito += producto.amount;
+	}
 
-	localStorage.setItem('carrito', JSON.stringify(carrito));
-	totalCompra(carrito);
+	$('.contadorCarrito').html(` `);
+	$('.contadorCarrito').html(`(${totalCarrito})`);
 }
+contadorCarrito(carrito);
 
-//ACTUALIZACION PRECIO
+//función borrar
+// function borrar(e) {
+// 	let index = carrito.findIndex((producto) => producto.id == e.target.id);
+// 	carrito.splice(index, 1);
 
+// 	let fila = e.target.parentNode.parentNode;
+// 	fila.remove();
+
+// 	localStorage.setItem('carrito', JSON.stringify(carrito));
+
+// 	totalCompra(carrito);
+
+// 	let carritoGuardado = JSON.parse(localStorage.getItem('carrito'));
+// 	contadorCarrito(carritoGuardado);
+// }
+
+//ACTUALIZACION PRECIO.......................................................
 function totalCompra(arrayCarrito) {
 	let totalProductos = 0;
 
@@ -42,14 +59,34 @@ function totalCompra(arrayCarrito) {
 	}
 	$('#total').html('$' + totalProductos);
 
-	console.log(totalProductos);
-
 	localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 totalCompra(carrito);
 
-//BOTON COMPRAR
+//BOTON + - PRODUCTOS.............................................................
+// let botonesAgregar = document.querySelectorAll('.agregar');
+
+// botonesAgregar.forEach((elemento) => {
+// 	elemento.addEventListener('click', agregar);
+// });
+
+// function agregar(e) {
+// 	let conteo = e.target.parentNode.children[0].innerText;
+// 	conteo++;
+// 	$('.hola').html(conteo);
+// }
+
+//BOTON COMPRAR.............................................................
 
 $('#comprarFinal').on('click', function() {
-	swal('Gracias por su compra!', 'Nos estaremos comunicando con usted', 'success');
+	Swal.fire({
+		title: 'Gracias por su compra!',
+		text: 'Nos estaremos contactando con usted.',
+		imageUrl: '../Imagenes/graciasCompra.jpg',
+		confirmButtonColor: '#d90429',
+		width: 600,
+		imageWidth: 400,
+		imageHeight: 200,
+		imageAlt: 'Custom image'
+	});
 });

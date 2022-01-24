@@ -152,6 +152,7 @@ function comprar(e) {
 	}
 
 	let index = carrito.findIndex((producto) => producto.id == e.target.parentNode.children[1].id);
+	console.log(index);
 
 	let name = e.target.parentNode.children[1].innerText;
 	let price = e.target.parentNode.children[2].innerText;
@@ -166,7 +167,26 @@ function comprar(e) {
 		carrito[index].amount++;
 	}
 
-	localStorage.setItem('carrito', JSON.stringify(carrito));
+	Swal.fire({
+		position: 'top-end',
+		icon: 'success',
+		title: 'Elemento agregado',
+		showConfirmButton: false,
+		timer: 800
+	});
+}
+
+//CONTADOR CARRITO
+
+function contadorCarrito(arrayCarrito) {
+	let totalCarrito = 0;
+
+	for (let producto of arrayCarrito) {
+		totalCarrito += producto.amount;
+	}
+
+	$('.contadorCarrito').html(` `);
+	$('.contadorCarrito').html(`(${totalCarrito})`);
 }
 
 //AJAX CON JQUERY PARA OPINIONES
