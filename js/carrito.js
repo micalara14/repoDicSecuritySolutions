@@ -10,7 +10,6 @@ function rellenarCarrito(arrayCarrito) {
 		);
 	}
 }
-
 rellenarCarrito(carrito);
 
 //ELIMINAR ELEMENTO........................................................
@@ -35,20 +34,20 @@ function contadorCarrito(arrayCarrito) {
 contadorCarrito(carrito);
 
 //función borrar
-// function borrar(e) {
-// 	let index = carrito.findIndex((producto) => producto.id == e.target.id);
-// 	carrito.splice(index, 1);
+function borrar(e) {
+	let index = carrito.findIndex((producto) => producto.id == e.target.id);
+	carrito.splice(index, 1);
 
-// 	let fila = e.target.parentNode.parentNode;
-// 	fila.remove();
+	let fila = e.target.parentNode.parentNode;
+	fila.remove();
 
-// 	localStorage.setItem('carrito', JSON.stringify(carrito));
+	localStorage.setItem('carrito', JSON.stringify(carrito));
 
-// 	totalCompra(carrito);
+	totalCompra(carrito);
 
-// 	let carritoGuardado = JSON.parse(localStorage.getItem('carrito'));
-// 	contadorCarrito(carritoGuardado);
-// }
+	let carritoGuardado = JSON.parse(localStorage.getItem('carrito'));
+	contadorCarrito(carritoGuardado);
+}
 
 //ACTUALIZACION PRECIO.......................................................
 function totalCompra(arrayCarrito) {

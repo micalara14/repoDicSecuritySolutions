@@ -123,6 +123,9 @@ function rellenarProductos(arrayProductos) {
 		<button type="button" class="btn btn-danger btn-lg comprar" id="comprar">COMPRAR</button>
 	</div>`);
 	}
+
+	// let carritoContador = JSON.parse(localStorage.getItem('carrito'));
+	// contadorCarrito(carritoContador);
 }
 
 rellenarProductos(productos);
@@ -141,32 +144,27 @@ let botones = document.querySelectorAll('.comprar');
 botones.forEach((elemento) => {
 	elemento.addEventListener('click', comprar);
 });
-
 let subTotal = 0;
-
 function comprar(e) {
 	let carritoGuardado = JSON.parse(localStorage.getItem('carrito'));
-
 	if (carritoGuardado) {
 		carrito = carritoGuardado;
 	}
-
 	let index = carrito.findIndex((producto) => producto.id == e.target.parentNode.children[1].id);
-	console.log(index);
-
 	let name = e.target.parentNode.children[1].innerText;
 	let price = e.target.parentNode.children[2].innerText;
 	let img = e.target.parentNode.children[0].children[0].src;
 	let id = e.target.parentNode.children[1].id;
+
 	price = parseInt(price.replace('$', ''));
 
 	if (index == -1) {
 		const producto = new ProductoCarrito(name, id, price, img);
 		carrito.push(producto);
+		console.log(carrito);
 	} else {
 		carrito[index].amount++;
 	}
-
 	Swal.fire({
 		position: 'top-end',
 		icon: 'success',
@@ -174,19 +172,8 @@ function comprar(e) {
 		showConfirmButton: false,
 		timer: 800
 	});
-}
 
-//CONTADOR CARRITO
-
-function contadorCarrito(arrayCarrito) {
-	let totalCarrito = 0;
-
-	for (let producto of arrayCarrito) {
-		totalCarrito += producto.amount;
-	}
-
-	$('.contadorCarrito').html(` `);
-	$('.contadorCarrito').html(`(${totalCarrito})`);
+	localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
 //AJAX CON JQUERY PARA OPINIONES
