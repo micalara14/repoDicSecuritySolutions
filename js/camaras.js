@@ -146,7 +146,6 @@ let botones = document.querySelectorAll('.comprar');
 botones.forEach((elemento) => {
 	elemento.addEventListener('click', comprar);
 });
-let subTotal = 0;
 function comprar(e) {
 	let carritoGuardado = JSON.parse(localStorage.getItem('carrito'));
 	if (carritoGuardado) {
@@ -163,7 +162,6 @@ function comprar(e) {
 	if (index == -1) {
 		const producto = new ProductoCarrito(name, id, price, img);
 		carrito.push(producto);
-		console.log(carrito);
 	} else {
 		carrito[index].amount++;
 	}
@@ -180,6 +178,7 @@ function comprar(e) {
 	contadorCarrito(carrito);
 }
 
+//CONTADOR CARRITO
 function contadorCarrito(arrayCarrito) {
 	let totalCarrito = 0;
 
@@ -188,7 +187,7 @@ function contadorCarrito(arrayCarrito) {
 	}
 
 	$('.contadorCarrito').html(``);
-	$('.contadorCarrito').html(totalCarrito);
+	$('.contadorCarrito').html(`(${totalCarrito})`);
 }
 
 //AJAX CON JQUERY PARA OPINIONES
