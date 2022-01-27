@@ -1,7 +1,9 @@
 /**
- * @challenge:  Tercera entrega Proyecto Final
+=======
+ * @challenge:  Carrito funcional
  * 
- * @version: v3.0.0
+ * @version: v4.0.0 
+>>>>>>> js
  * @author: Micaela Mendoza
  * @fecha: 20/01/2022
  *
@@ -14,5 +16,26 @@
  * v1.5.0 - Desafío 6
  * v2.0.0 - Segunda entrega desafío final
  * v.2.1.0 - Desafío 12
- * v.2.2.0 - Desafrío 13
+ * v.2.2.0 - Desafío 13 
+ * v.3.0.0 - Tercera entrega desafío final
+>>>>>>> js
  */
+
+//  CONTADOR CARRITO
+const carritoHtmlIndex = JSON.parse(localStorage.getItem('carrito'));
+
+function rellenarCarrito(arrayCarrito) {
+	for (let producto of arrayCarrito) {
+	}
+}
+rellenarCarrito(carritoHtmlIndex);
+
+function contadorCarrito(arrayCarrito) {
+	let totalCarrito = 0;
+
+	for (let producto of arrayCarrito) {
+		totalCarrito += producto.amount;
+	}
+	$('.contadorCarrito').html(`(${totalCarrito})`);
+}
+contadorCarrito(carritoHtmlIndex);
