@@ -5,13 +5,13 @@ let carrito = JSON.parse(localStorage.getItem('carrito'));
 function rellenarCarrito(arrayCarrito) {
 	for (let producto of arrayCarrito) {
 		$('.tbody').append(
-			`<tr><td> ${producto.name} </td>
-			<td> $${producto.price} </td>
+			`<tr><td> <p>  ${producto.name} </p> </td>
+			<td class="precioEnTabla"> <p> $${producto.price} </p> </td>
 			<td> <p>${producto.amount}</p> 
-			<button type="button" class="btn btn-danger agregar" id="${producto.id}">+</button>
-			<button class="btn btn-danger sacar" id="${producto.id}">-</button></td>
-			<td class="subtotal"> $${producto.price * producto.amount}</td>
-			<td><button type="button" class="btn btn-danger delete" id="${producto.id}">Eliminar</button></td></tr>`
+			<div class="divBotones"> <p><button class="btn btn-danger sacar" id="${producto.id}">-</button></p>
+			<p><button type="button" class="btn btn-danger agregar" id="${producto.id}">+</button></p> </div> </td> 
+			<td class="subtotal"> <p> $${producto.price * producto.amount} </p> </td> 
+			<td> <div class="divBotones"><button type="button" class="btn btn-danger delete" id="${producto.id}">Eliminar</button></div> </td></tr>`
 		);
 	}
 }
@@ -43,12 +43,13 @@ function borrar(e) {
 	let index = carrito.findIndex((producto) => producto.id == e.target.id);
 	carrito.splice(index, 1);
 
-	let fila = e.target.parentNode.parentNode;
+	let fila = e.target.parentNode.parentNode.parentNode;
 	fila.remove();
 
 	localStorage.setItem('carrito', JSON.stringify(carrito));
 
 	totalCompra(carrito);
+	finalizarCompra(carrito);
 
 	let carritoGuardado = JSON.parse(localStorage.getItem('carrito'));
 	contadorCarrito(carritoGuardado);
@@ -64,18 +65,18 @@ botonesAgregar.forEach((elemento) => {
 
 //funcion agregar
 function agregar(e) {
-	let conteo = e.target.parentNode.children[0].innerText;
-	let price = e.target.parentNode.parentNode.children[1].innerText;
-	let subtotal = e.target.parentNode.parentNode.children[3].innerText;
+	let conteo = e.target.parentNode.parentNode.parentNode.children[0].innerText;
+	let price = e.target.parentNode.parentNode.parentNode.parentNode.children[1].children[0].innerText;
+	let subtotal = e.target.parentNode.parentNode.parentNode.parentNode.children[3].children[0].innerText;
 	price = parseInt(price.replace('$', ''));
 
 	//aumento de contador
 	conteo++;
-	e.target.parentNode.children[0].innerText = conteo;
+	e.target.parentNode.parentNode.parentNode.children[0].innerText = conteo;
 
 	//muestra de precio subtotal por producto
 	subtotal = price * conteo;
-	e.target.parentNode.parentNode.children[3].innerText = '$' + subtotal;
+	e.target.parentNode.parentNode.parentNode.parentNode.children[3].children[0].innerText = '$' + subtotal;
 
 	//que sea solo para ese producto y lo guarde en el carrito
 	let index = carrito.findIndex((producto) => producto.id == e.target.id);
@@ -97,17 +98,17 @@ botonesSacar.forEach((elemento) => {
 
 //funcioon sacar
 function sacar(e) {
-	let conteo = e.target.parentNode.children[0].innerText;
-	let price = e.target.parentNode.parentNode.children[1].innerText;
-	let subtotal = e.target.parentNode.parentNode.children[3].innerText;
+	let conteo = e.target.parentNode.parentNode.parentNode.children[0].innerText;
+	let price = e.target.parentNode.parentNode.parentNode.parentNode.children[1].children[0].innerText;
+	let subtotal = e.target.parentNode.parentNode.parentNode.parentNode.children[3].children[0].innerText;
 	price = parseInt(price.replace('$', ''));
 
 	if (conteo >= 2) {
 		conteo--;
-		e.target.parentNode.children[0].innerText = conteo;
+		e.target.parentNode.parentNode.parentNode.children[0].innerText = conteo;
 
 		subtotal = price * conteo;
-		e.target.parentNode.parentNode.children[3].innerText = '$' + subtotal;
+		e.target.parentNode.parentNode.parentNode.parentNode.children[3].children[0].innerText = '$' + subtotal;
 	} else {
 		conteo = 1;
 		subtotal = price;
@@ -138,27 +139,29 @@ function totalCompra(arrayCarrito) {
 totalCompra(carrito);
 
 //BOTON COMPRAR.............................................................
-
-if (carrito.length >= 1) {
-	$('#comprarFinal').on('click', function() {
-		Swal.fire({
-			title: 'Gracias por su compra!',
-			text: 'Nos estaremos contactando con usted.',
-			imageUrl: '../Imagenes/graciasCompra.jpg',
-			confirmButtonColor: '#d90429',
-			width: 600,
-			imageWidth: 400,
-			imageHeight: 200,
-			imageAlt: 'Custom image'
+function finalizarCompra() {
+	if (carrito.length >= 1) {
+		$('#comprarFinal').on('click', function() {
+			Swal.fire({
+				title: 'Gracias por su compra!',
+				text: 'Nos estaremos contactando con usted.',
+				imageUrl: '../Imagenes/graciasCompra.jpg',
+				confirmButtonColor: '#d90429',
+				width: 600,
+				imageWidth: 400,
+				imageHeight: 200,
+				imageAlt: 'Custom image'
+			});
 		});
-	});
-} else {
-	$('#comprarFinal').on('click', function() {
-		Swal.fire({
-			icon: 'error',
-			title: 'Ups!',
-			text: 'Para poder procesar la compra debes agregar elementos al carrito.',
-			confirmButtonColor: '#d90429'
+	} else {
+		$('#comprarFinal').on('click', function() {
+			Swal.fire({
+				icon: 'error',
+				title: 'Ups!',
+				text: 'Para poder procesar la compra debes agregar elementos al carrito.',
+				confirmButtonColor: '#d90429'
+			});
 		});
-	});
+	}
 }
+finalizarCompra(carrito);

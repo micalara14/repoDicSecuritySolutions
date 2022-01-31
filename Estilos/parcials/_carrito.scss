@@ -1,3 +1,4 @@
+// TITULO
 .tituloCarrito {
 	font-size: $tamFuente+2rem;
 	font-family: $fuenteM;
@@ -8,6 +9,7 @@
 	}
 }
 
+// TABLA CON PRODUCTOS
 .table {
 	font-size: $tamFuente;
 	font-family: $fuenteM;
@@ -18,11 +20,6 @@
 	}
 	td {
 		margin: 1rem;
-		p {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
 	}
 	.titleTable {
 		p {
@@ -30,12 +27,45 @@
 			font-weight: bold;
 			color: $rojo;
 			text-shadow: 1px 1px $gris;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			@include telefono {
+				font-size: $tamFuente;
+			}
 		}
 	}
 	button {
 		margin: 0.5rem;
+	}
+	p {
+		display: flex;
+		justify-content: center;
+	}
+	.divBotones {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+// PRECIO
+.precio {
+	font-size: $tamFuente+0.5;
+	font-family: $fuenteM;
+	color: $azul;
+	margin: 1rem;
+	@include telefono {
+		text-align: center;
+	}
+}
+
+// BOTON COMPRAR
+.botonComprar {
+	display: flex;
+	justify-content: center;
+	margin: 2rem;
+}
+
+// BORRAR CANTIDAD EN CELULAR
+.precioEnTabla {
+	@include telefono {
+		display: none;
 	}
 }
