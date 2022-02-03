@@ -8,8 +8,8 @@ function rellenarCarrito(arrayCarrito) {
 			`<tr><td> <p>  ${producto.name} </p> </td>
 			<td class="precioEnTabla"> <p> $${producto.price} </p> </td>
 			<td> <p>${producto.amount}</p> 
-			<div class="divBotones"> <p><button class="btn btn-danger sacar" id="${producto.id}">-</button></p>
-			<p><button type="button" class="btn btn-danger agregar" id="${producto.id}">+</button></p> </div> </td> 
+			<div class="divBotones"> <p><button class="btn btn-danger sacar" title="${producto.id}">-</button></p>
+			<p><button type="button" class="btn btn-danger agregar" title="${producto.id}">+</button></p> </div> </td> 
 			<td class="subtotal"> <p> $${producto.price * producto.amount} </p> </td> 
 			<td> <div class="divBotones"><button type="button" class="btn btn-danger delete" id="${producto.id}">Eliminar</button></div> </td></tr>`
 		);
@@ -79,7 +79,7 @@ function agregar(e) {
 	e.target.parentNode.parentNode.parentNode.parentNode.children[3].children[0].innerText = '$' + subtotal;
 
 	//que sea solo para ese producto y lo guarde en el carrito
-	let index = carrito.findIndex((producto) => producto.id == e.target.id);
+	let index = carrito.findIndex((producto) => producto.id == e.target.title);
 	carrito[index].amount = conteo;
 
 	//que se actualice solo el contador del carrito y el total
@@ -115,7 +115,7 @@ function sacar(e) {
 	}
 
 	//que sea solo para ese producto y lo guarde en el carrito
-	let index = carrito.findIndex((producto) => producto.id == e.target.id);
+	let index = carrito.findIndex((producto) => producto.id == e.target.title);
 	carrito[index].amount = conteo;
 
 	//que se actualice solo el contador del carrito y el total
