@@ -141,18 +141,45 @@ totalCompra(carrito);
 //BOTON COMPRAR.............................................................
 function finalizarCompra() {
 	if (carrito.length >= 1) {
-		$('#comprarFinal').on('click', function() {
-			Swal.fire({
-				title: 'Gracias por su compra!',
-				text: 'Nos estaremos contactando con usted.',
-				imageUrl: '../Imagenes/graciasCompra.jpg',
-				confirmButtonColor: '#d90429',
-				width: 600,
-				imageWidth: 400,
-				imageHeight: 200,
-				imageAlt: 'Custom image'
-			});
+		let botonPagoFinal = document.getElementById('comprarFinal');
+
+		botonPagoFinal.addEventListener('click', (e) => {
+			pagar();
 		});
+
+		const pagar = () => {
+			const productosToMp = carrito.map((element) => {
+				let nuevoElemento = {
+					title: element.name,
+					description: '',
+					picture_url: '',
+					category_id: element.id,
+					quantity: element.amount,
+					currency_id: 'ARS',
+					unit_price: element.price
+				};
+
+				console.log(nuevoElemento);
+				return nuevoElemento;
+			});
+
+			$.ajax({
+				method: 'POST',
+				url: 'https://api.mercadopago.com/checkout/preferences',
+				data: JSON.stringify(productosToMp),
+				headers: {
+					Authorization: 'Bearer TEST-2243856972594068-020320-766fb839fea4fabfb498d5976c395f6e-187498555'
+				},
+				data: JSON.stringify({
+					items: productosToMp
+				}),
+				success: function(response) {
+					const data = response;
+
+					window.open(data.init_point, '_blank');
+				}
+			});
+		};
 	} else {
 		$('#comprarFinal').on('click', function() {
 			Swal.fire({

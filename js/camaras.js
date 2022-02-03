@@ -46,42 +46,48 @@ const productos = [
 		name: 'Cámara WIFI con vision nocturna, luz y parlante',
 		price: 22500,
 		type: 'cámara',
-		img: '../Imagenes/camara-wifi-1.png'
+		img: '../Imagenes/camara-wifi-1.png',
+		descripcion: 'Cámara'
 	},
 	{
 		id: 2,
 		name: 'Cámara WIFI con visión nocturna',
 		price: 20000,
 		type: 'cámara',
-		img: '../Imagenes/camara-wifi-2.png'
+		img: '../Imagenes/camara-wifi-2.png',
+		descripcion: 'Cámara'
 	},
 	{
 		id: 3,
 		name: 'Cámara WIFI DOMO con movimiento',
 		price: 19500,
 		type: 'cámara',
-		img: '../Imagenes/camara-domo.png'
+		img: '../Imagenes/camara-domo.png',
+		descripcion: 'Cámara'
 	},
 	{
 		id: 4,
 		name: 'Alarma inalámbrica',
 		price: 45000,
 		type: 'alarma',
-		img: '../Imagenes/alarma-inalambrica.png'
+		img: '../Imagenes/alarma-inalambrica.png',
+		descripcion: 'Alarma'
 	},
 	{
 		id: 5,
 		name: 'Alarma alámbrica',
 		price: 30000,
 		type: 'alarma',
-		img: '../Imagenes/alarma-cableada.png'
+		img: '../Imagenes/alarma-cableada.png',
+		descripcion: 'Alarma'
 	},
 	{
 		id: 6,
 		name: 'Botón de pánico',
 		price: 6500,
 		type: 'alarma',
-		img: '../Imagenes/boton-panico.png'
+		img: '../Imagenes/boton-panico.png',
+		descripcion: 'Alarma'
 	}
 ];
 
