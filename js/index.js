@@ -1,11 +1,11 @@
 /**
 =======
- * @challenge:  Carrito funcional
+ * @challenge:  Entrega final
  * 
- * @version: v4.0.0 
+ * @version: v5.0.0 
 >>>>>>> js
  * @author: Micaela Mendoza
- * @fecha: 20/01/2022
+ * @fecha: 04/02/2022
  *
  * History:
  * v1.0.0 - Desafío 1
@@ -18,7 +18,7 @@
  * v.2.1.0 - Desafío 12
  * v.2.2.0 - Desafío 13 
  * v.3.0.0 - Tercera entrega desafío final
->>>>>>> js
+ * v4.0.0 - Carrito funcional
  */
 
 //  CONTADOR CARRITO

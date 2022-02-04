@@ -1,18 +1,22 @@
 //CONTADOR CARRITO
-const carritoHtmlservTecnico = JSON.parse(localStorage.getItem('carrito'));
 
-function rellenarCarrito(arrayCarrito) {
-	for (let producto of arrayCarrito) {
+//window load por imágenes pesadas
+$(window).load(function() {
+	const carritoHtmlservTecnico = JSON.parse(localStorage.getItem('carrito'));
+
+	function rellenarCarrito(arrayCarrito) {
+		for (let producto of arrayCarrito) {
+		}
 	}
-}
-rellenarCarrito(carritoHtmlservTecnico);
+	rellenarCarrito(carritoHtmlservTecnico);
 
-function contadorCarrito(arrayCarrito) {
-	let totalCarrito = 0;
+	function contadorCarrito(arrayCarrito) {
+		let totalCarrito = 0;
 
-	for (let producto of arrayCarrito) {
-		totalCarrito += producto.amount;
+		for (let producto of arrayCarrito) {
+			totalCarrito += producto.amount;
+		}
+		$('.contadorCarrito').html(`(${totalCarrito})`);
 	}
-	$('.contadorCarrito').html(`(${totalCarrito})`);
-}
-contadorCarrito(carritoHtmlservTecnico);
+	contadorCarrito(carritoHtmlservTecnico);
+});

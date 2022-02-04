@@ -13,6 +13,7 @@ function validar(e) {
 	e.preventDefault();
 	result.innerHTML = `Hola ${mail.value}! Formulario enviado.`;
 }
+
 // boton reset
 function rst() {
 	formulario.reset();

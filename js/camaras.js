@@ -1,8 +1,8 @@
-//PRECIOS POR ZONA CON AJAX
+//PRECIOS POR ZONA CON AJAX...................................
 
 const URLGET = '../JSON/pinstalacion.json';
 
-//Zona GBA 1
+//zona GBA 1
 $('#boton1').click(() => {
 	$.getJSON(URLGET, function(respuesta, estado) {
 		if (estado === 'success') {
@@ -11,7 +11,7 @@ $('#boton1').click(() => {
 	});
 });
 
-//Zona GBA 2
+//zona GBA 2
 $('#boton2').click(() => {
 	$.getJSON(URLGET, function(respuesta, estado) {
 		if (estado === 'success') {
@@ -20,7 +20,7 @@ $('#boton2').click(() => {
 	});
 });
 
-//Zona GBA 3
+//zona GBA 3
 $('#boton3').click(() => {
 	$.getJSON(URLGET, function(respuesta, estado) {
 		if (estado === 'success') {
@@ -29,7 +29,7 @@ $('#boton3').click(() => {
 	});
 });
 
-//Zona CABA
+//zona CABA
 $('#boton4').click(() => {
 	$.getJSON(URLGET, function(respuesta, estado) {
 		if (estado === 'success') {
@@ -38,8 +38,7 @@ $('#boton4').click(() => {
 	});
 });
 
-//......................................
-//PRODUCTOS
+//PRODUCTOS...................................................
 const productos = [
 	{
 		id: 1,
@@ -91,7 +90,7 @@ const productos = [
 	}
 ];
 
-//CARRITO
+//CARRITO.........................................................
 let carrito = [];
 
 class ProductoCarrito {
@@ -105,7 +104,7 @@ class ProductoCarrito {
 	}
 }
 
-//PRODUCTOS EN PAGINA
+//PRODUCTOS EN PAGINA...............................................
 function rellenarProductos(arrayProductos) {
 	for (let producto of arrayProductos) {
 		$('#rowCamaras')
@@ -138,7 +137,7 @@ function rellenarProductos(arrayProductos) {
 
 rellenarProductos(productos);
 
-//ANIMACION CON JQUERY EN PRECIO DE PRODUCTOS
+//ANIMACION CON JQUERY EN PRECIO DE PRODUCTOS.........................................
 $(document).ready(function() {
 	$('.bkPrice').fadeIn(4000);
 	$('.bkPrice').css({
@@ -146,7 +145,7 @@ $(document).ready(function() {
 	});
 });
 
-// ACCIÓN DEL BOTÓN COMPRAR
+// ACCIÓN DEL BOTÓN COMPRAR..............................................................
 let botones = document.querySelectorAll('.comprar');
 
 botones.forEach((elemento) => {
@@ -172,7 +171,6 @@ function comprar(e) {
 		carrito[index].amount++;
 	}
 	Swal.fire({
-		position: 'top-end',
 		icon: 'success',
 		title: 'Elemento agregado',
 		showConfirmButton: false,
@@ -184,7 +182,7 @@ function comprar(e) {
 	contadorCarrito(carrito);
 }
 
-//CONTADOR CARRITO
+//CONTADOR CARRITO.........................................................................
 function contadorCarrito(arrayCarrito) {
 	let totalCarrito = 0;
 
@@ -196,7 +194,7 @@ function contadorCarrito(arrayCarrito) {
 	$('.contadorCarrito').html(`(${totalCarrito})`);
 }
 
-//AJAX CON JQUERY PARA OPINIONES
+//AJAX CON JQUERY PARA OPINIONES...........................................................
 const URLGETT = 'https://jsonplaceholder.typicode.com/users';
 
 $('#opiniones').one('click', function() {

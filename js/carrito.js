@@ -1,5 +1,4 @@
-//RELLENO CARRITO EN CARRITO.HTML
-
+//RELLENO CARRITO EN CARRITO.HTML...........................................
 let carrito = JSON.parse(localStorage.getItem('carrito'));
 
 function rellenarCarrito(arrayCarrito) {
@@ -31,7 +30,6 @@ function contadorCarrito(arrayCarrito) {
 contadorCarrito(carrito);
 
 //ELIMINAR ELEMENTO........................................................
-
 let botonesDelete = document.querySelectorAll('.delete');
 
 botonesDelete.forEach((elemento) => {
@@ -138,7 +136,7 @@ function totalCompra(arrayCarrito) {
 }
 totalCompra(carrito);
 
-//BOTON COMPRAR.............................................................
+//BOTON COMPRAR............................................................
 function finalizarCompra() {
 	if (carrito.length >= 1) {
 		let botonPagoFinal = document.getElementById('comprarFinal');
